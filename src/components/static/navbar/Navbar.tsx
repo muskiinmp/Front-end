@@ -15,12 +15,17 @@ function Navbar() {
         </Typography>
 
       </Box>
+      
       <Box display='flex' justifyContent='start'>
+        <Link to = 'home' className = 'navegacao'>
         <Box mx={1} style={{ cursor: "pointer" }} >
           <Typography variant="h6" color="inherit" >
             Home
           </Typography>
         </Box>
+        
+        </Link>
+        
 
         <Box mx={1} style={{ cursor: "pointer" }} >
           <Typography variant="h6" color="inherit" >
@@ -36,18 +41,23 @@ function Navbar() {
 
         </Box>
 
-        <Box mx={1} style={{ cursor: "pointer" }} >
-          <Typography variant="h6" color="inherit" >
-            Login
-          </Typography>
-        </Box>
+        <Link to = '/login' className = 'navegacao'>
+          <Box mx={1} style={{ cursor: "pointer" }} >
+            <Typography variant="h6" color="inherit" >
+              Login
+            </Typography>
+          </Box>
+        </Link>
 
+        <Link to = 'contato' className = 'navegacao'>
         <Box mx={1} style={{ cursor: "pointer" }} >
           <Typography variant="h6" color="inherit" >
             Contato
           </Typography>
         </Box>
-        <Link to = '/login' className = 'login'>
+        </Link>
+        
+        <Link to = '/login' className = 'navegacao'>
           <Box mx ={1} style={{ cursor: "pointer", color:'white'}}>
             <Typography variant="h6" color="inherit">
               Logout
