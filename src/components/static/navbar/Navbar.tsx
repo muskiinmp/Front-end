@@ -24,6 +24,13 @@ function Navbar() {
 
         <Box mx={1} style={{ cursor: "pointer" }} >
           <Typography variant="h6" color="inherit" >
+           Produto
+          </Typography>
+
+        </Box>
+
+        <Box mx={1} style={{ cursor: "pointer" }} >
+          <Typography variant="h6" color="inherit" >
             Categoria
           </Typography>
 
