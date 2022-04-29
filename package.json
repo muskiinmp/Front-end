@@ -5,10 +5,10 @@
   "dependencies": {
     "@emotion/react": "11.5.0",
     "@emotion/styled": "11.3.0",
-    "@material-ui/core": "4.12.3",
+    "@material-ui/core": "^4.12.3",
     "@material-ui/icons": "4.11.2",
     "@material-ui/lab": "4.0.0-alpha.60",
-    "@mui/icons-material": "5.0.5",
+    "@mui/icons-material": "^5.0.5",
     "@mui/material": "5.0.6",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
@@ -19,7 +19,11 @@
     "@types/react-dom": "^17.0.11",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+<<<<<<< HEAD
     "react-elastic-carousel": "^0.11.5",
+=======
+    "react-router-dom": "6",
+>>>>>>> 8db5544c16109cb007538d617b27f16acaadda4e
     "react-scripts": "5.0.0",
     "styled-components": "^5.3.5",
     "typescript": "^4.5.5",
