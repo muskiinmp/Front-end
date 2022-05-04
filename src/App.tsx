@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './pages/login/Login'
 import CadastroUsuario from './pages/cadastroUsuario/CadastroUsuario';
 
+
 function App() {
   return(
       <Router>
@@ -23,7 +24,6 @@ function App() {
       </Router>
     );
     
-
 }
 
 export default App;
