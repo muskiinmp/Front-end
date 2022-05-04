@@ -1,3 +1,25 @@
-.text-decoration-none{
+.text-decoration-none {
     text-decoration: none !important;
+}
+
+.box1{
+    background-color: #3F51B5;
+    height: 80px; 
+    
+}
+
+.box2 {
+    background-color: #303F9F;
+    height: 50px;
+
+}
+
+.redes{
+    font-size: 30px !important;
+    color: white;
+}
+
+.icones{
+    display: flex;
+    gap: 15px;
 }
