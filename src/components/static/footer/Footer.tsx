@@ -3,6 +3,7 @@ import InstagramIcon from '@material-ui/icons/Instagram';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import { Typography,  Grid, Box } from '@material-ui/core';
+import './Footer.css';
 
 
 function Footer() {
@@ -30,9 +31,9 @@ function Footer() {
                         <Box paddingTop={1}>
                             <Typography variant="subtitle2" align="center" gutterBottom style={{ color: "white" }} >© 2022 Copyright:</Typography>
                         </Box>
-                        <Box>
-                            <a target="_blank" href="https://brasil.generation.org">
-                                <Typography variant="subtitle2" gutterBottom style={{ color: "white" }} align="center">brasil.generation.org</Typography>
+                        <Box >
+                            <a className='text-decoration-none' target="_blank" href="https://brasil.generation.org">
+                                <Typography  variant="subtitle2" gutterBottom style={{ color: "white" }} align="center">brasil.generation.org</Typography>
                             </a>
                         </Box>
                     </Box>

@@ -1,9 +1,57 @@
-import React from 'react';
-import { Grid, Box, Typography, TextField, Button } from '@material-ui/core';
-import { Link } from 'react-router-dom';
+import React, { ChangeEvent, useEffect, useState } from 'react'
+import { Box, Button, Grid, TextField, Typography } from '@material-ui/core'
+import { Link, useNavigate } from 'react-router-dom';
+import useLocalStorage from 'react-use-localstorage';
+import {login} from '../../service/Service';
+import UsuarioLogin from '../../model/UsuarioLogin';
+
 import './Login.css';
 
-function Login(){
+
+    function Login() {
+
+
+        let history = useNavigate()
+    
+        const [token, setToken] = useLocalStorage('token')
+    
+        const [usuarioLogin, setusuarioLogin] = useState<UsuarioLogin>({
+            id: 0,
+            usuario: "",
+            senha: "",
+            token: ""
+        })
+    
+    
+        
+        function updatedModel(e: ChangeEvent<HTMLInputElement>) {
+            setusuarioLogin({
+                ...usuarioLogin,
+                [e.target.name]: e.target.value
+            })
+        }
+    
+        useEffect(() => {
+            if(token !== ""){
+                history('/home')
+            }
+        }, [token])
+    
+        async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
+            e.preventDefault();
+            try {
+                await login('/usuarios/logar', usuarioLogin, setToken)
+                alert("Usuário logado com sucesso");
+    
+            } catch (error) {
+                alert("Dados do usuário inconsistentes");
+            };
+    
+    
+        }
+
+
+
   return (
       <Grid container direction='row' justifyContent='center' alignItems='center'>
           <Grid alignItems='center' xs={6}>
@@ -33,4 +81,4 @@ function Login(){
   );
 }
 
-export default Login;
+export default Login
