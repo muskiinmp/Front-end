@@ -3,6 +3,7 @@ import React, { useState, useEffect, ChangeEvent } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import Usuario from '../../model/Usuario'
 import { cadastroUsuario } from '../../service/Service'
+import './CadastroUsuario.css'
 
 function CadastroUsuario() {
     let history = useNavigate()
@@ -178,7 +179,8 @@ function CadastroUsuario() {
                             <Link to='/login' className='linkTexto'>
 
                                 <Button
-                                    variant='contained'
+                                    variant='contained' 
+                                    className='btnCancelar'
 
                                 >Cancelar</Button>
                             </Link>
