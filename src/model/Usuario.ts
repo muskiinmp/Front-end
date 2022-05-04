@@ -4,6 +4,6 @@ interface Usuario{
     usuario: string
     senha: string
     foto: string
-    data: string
+    dataNascimento: string
 }
 export default Usuario
