@@ -80,7 +80,7 @@ function CadastroUsuario() {
 
             <Grid item xs={6} alignItems='center'>
                 <Box padding={10}>
-                    <form>
+                    <form onSubmit={cadastrar}>
                         <Typography
                             variant='h5'
                             gutterBottom
@@ -88,7 +88,7 @@ function CadastroUsuario() {
                             align='center'
                             className='tituloCadastro'
                         >
-                            Cadastro
+                            Cadastrar
 
                         </Typography>
 
@@ -98,9 +98,11 @@ function CadastroUsuario() {
                             variant='outlined'
                             name='nome'
                             margin='normal'
-                            placeholder='Digite o seu nome'
+                            placeholder='Digite o seu nome'                
                             required
                             fullWidth
+                            value={user.nome}
+                            onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
                         >
                             Nome
 
@@ -115,6 +117,8 @@ function CadastroUsuario() {
                             placeholder='Digite um e-mail'
                             required
                             fullWidth
+                            value={user.usuario}
+                            onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
                         >
                             Usuario
                         </TextField>
@@ -129,35 +133,40 @@ function CadastroUsuario() {
                             type='password'
                             required
                             fullWidth
+                            value={user.senha}
+                            onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
                         >
                             Senha
                         </TextField>
 
                         <TextField
-                            id='confirmar senha'
+                            id='confirmarSenha'
                             label='Confirmar senha'
                             variant='outlined'
-                            name='confirmar senha'
+                            name='confirmarSenha'
                             margin='normal'
                             placeholder='Confirme a senha'
                             type='password'
                             required
                             fullWidth
+                            value={confirmarSenha}
+                            onChange={(e: ChangeEvent<HTMLInputElement>) => confirmarSenhaHandle(e)}
                         >
                             Confirmar senha
 
                         </TextField>
 
                         <TextField
-                            id='data de nascimento'
-                            label='Data de nascimento'
+                            id='dataNascimento'
+                            label=''
                             variant='outlined'
-                            name='data de nascimento'
+                            name='dataNascimento'
                             margin='normal'
-                            placeholder='Digite sua data de nascimento'
                             type='date'
                             required
                             fullWidth
+                            value={user.dataNascimento}
+                            onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
                         >
                             Data de nascimento
                         </TextField>
@@ -166,7 +175,7 @@ function CadastroUsuario() {
                                 type='submit'
                                 variant='contained'
                             >Cadastrar</Button>
-                            <Link to='/home' className='linkTexto'>
+                            <Link to='/login' className='linkTexto'>
 
                                 <Button
                                     variant='contained'
@@ -174,9 +183,6 @@ function CadastroUsuario() {
                                 >Cancelar</Button>
                             </Link>
                         </Box>
-
-
-
 
                     </form>
 

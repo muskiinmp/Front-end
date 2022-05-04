@@ -10,11 +10,11 @@ function Home() {
             </Grid>
             <Grid xs={12} container item direction='row' alignItems='flex-start' className='teste, caixa'>
                 <Box>
-                  <Typography variant='h3' className='titulo' >Acabaram de chegar</Typography>
+                  <Typography variant='h3' className='titulo'>Acabaram de chegar</Typography>
                   <Typography variant='h5' className='titulo'>Novidades esperando por você</Typography>
                 </Box>
             </Grid>
-            <Grid container justifyContent='center' className='imagem'>
+            <Grid container justifyContent='center'>
               <Grid xs={3} item >
               <img src="https://static.wixstatic.com/media/36ee3b_83da74e02c14400cbe9a0a204e0309f3~mv2.jpg/v1/fill/w_224,h_334,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/ED5A1591_JPG.jpg" alt="" />
               </Grid>
