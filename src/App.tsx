@@ -5,28 +5,25 @@ import Navbar from './components/static/navbar/Navbar'
 import Footer from './components/static/footer/Footer'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './pages/login/Login'
-import Contato from './pages/contato/Contato'
+import CadastroUsuario from './pages/cadastroUsuario/CadastroUsuario';
+
 
 function App() {
   return(
-
-    
       <Router>
         <Navbar />
         <div style={{ minHeight: '100vh' }}>
-          <Routes> // Antigo Switch
+          <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/home" element={<Home />} />
-            <Route path="/contato" element={<Contato />} />
-  
+            <Route path="/cadastrar" element={<CadastroUsuario />} />
           </Routes>
         </div>
         <Footer />
       </Router>
     );
     
-
 }
 
 export default App;
