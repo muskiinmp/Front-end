@@ -16,8 +16,12 @@ function ListaCategoria() {
         (state) => state.tokens
     );
 
-    function getCategoria() {
-        return busca("/categorias", setCategorias)
+    async function getCategoria() {
+        await busca("/categorias/todos", setCategorias, {
+            headers: {
+                "Authorization": token
+            }
+        })
     }
 
     useEffect(() => {
@@ -43,14 +47,14 @@ function ListaCategoria() {
                             </CardContent>
                             <CardActions>
                                 <Box display="flex" justifyContent="center" mb={1.5} >
-                                    <Link to={`/formularioTema/${item.id}`} className="text-decorator-none">
+                                    <Link to={`/criarCategoria/${item.id}`} className="text-decorator-none">
                                         <Box mx={1}>
                                             <Button variant="contained" className="botaoAtualizar" size='small'>
                                                 atualizar
                                             </Button>
                                         </Box>
                                     </Link>
-                                    <Link to={`/deletarTema/${item.id}`} className="text-decorator-none">
+                                    <Link to={`/deletar-categoria/${item.id}`} className="text-decorator-none">
                                         <Box mx={1}>
                                             <Button variant="contained" size='small' className='botaoCancelar'>
                                                 deletar

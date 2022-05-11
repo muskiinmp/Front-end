@@ -54,10 +54,10 @@ function DeletarCategoria() {
     }
 
     async function sim() {
-        history("/categorias")
+        history('/categorias')
 
         try {
-            await deleteId(`/temas/${id}`, {
+            await deleteId(`/categorias/${id}`, {
                 headers: {
                     'Authorization': token
                 }

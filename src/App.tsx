@@ -10,11 +10,15 @@ import CadastroCategoria from './components/categorias/cadastroCategoria/Cadastr
 import ListaCategoria from './components/categorias/listaCategoria/ListaCategoria';
 import { Provider } from 'react-redux';
 import store from './store/store'
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import DeletarCategoria from './components/categorias/deletarCategoria/DeletarCategoria';
 
 
 function App() {
   return(
     <Provider store={store}>
+      <ToastContainer />
       <Router>
         <Navbar />
         <div style={{ minHeight: '100vh' }}>
@@ -25,9 +29,8 @@ function App() {
             <Route path="/cadastrar" element={<CadastroUsuario />} />
             <Route path="/categorias" element={<ListaCategoria />} />
             <Route path="/criarCategoria" element={<CadastroCategoria />} />
-            <Route path="/atualizar-categoria/:id" element={<CadastroCategoria />} />
-            <Route path="/deletar-categoria/:id" element={<CadastroCategoria />} />
-
+            <Route path="/criarCategoria/:id" element={<CadastroCategoria />} />
+            <Route path="/deletar-categoria/:id" element={<DeletarCategoria />} />
           </Routes>
         </div>
         <Footer />

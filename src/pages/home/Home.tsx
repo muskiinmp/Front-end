@@ -14,21 +14,6 @@ function Home() {
     (state) => state.tokens
   )
 
-  useEffect(() => {
-    if (token === "") {
-      toast.warn('você precisa estar logado', {
-        position: "top-right",
-        autoClose: 2500,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
-      history("/login")
-    }
-  });
-
   return (
     <>
       <Grid container direction='row' className='caixa' justifyContent='center'>
