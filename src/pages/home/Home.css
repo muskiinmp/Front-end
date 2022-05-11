@@ -1,0 +1,29 @@
+.caixa{
+    background-color: #c8946e;
+}
+
+.carrosel{
+    background-image: url("https://static.wixstatic.com/media/36ee3b_46b6e6cdfdc24c8d910c057c67e5a577~mv2.jpg/v1/fill/w_1261,h_403,al_t,q_85,usm_0.66_1.00_0.01,enc_auto/36ee3b_46b6e6cdfdc24c8d910c057c67e5a577~mv2.jpg");
+    background-repeat: no-repeat;
+    width: 1261px;
+    height: 403px;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.titulo{
+    font-weight: bold !important;
+    color: white;
+    font-family: Roboto !important; 
+    margin-left: 10px !important;   
+}
+
+.imagem{
+    cursor: pointer;
+}
+
+.teste{
+    padding: 5px;
+}
