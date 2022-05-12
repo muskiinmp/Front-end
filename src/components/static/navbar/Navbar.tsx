@@ -81,13 +81,7 @@ function Navbar() {
               </Typography>
             </Box>
           </Link>
-          <Link to='/login' className='navegacao'>
-            <Box mx={1} style={{ cursor: "pointer" }} >
-              <Typography variant="h6" color="inherit" >
-                Login
-              </Typography>
-            </Box>
-          </Link>
+          
 
           <Link to='contato' className='navegacao'>
             <Box mx={1} style={{ cursor: "pointer" }} >
@@ -137,7 +131,7 @@ function Navbar() {
               </Typography>
             </Box>
           </Link>
-          <Link to='contato' className='navegacao'>
+          <Link to='/contato' className='navegacao'>
             <Box mx={1} style={{ cursor: "pointer" }} >
               <Typography variant="h6" color="inherit" >
                 Contato

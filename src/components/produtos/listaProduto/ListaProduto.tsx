@@ -19,9 +19,13 @@ function ListaProduto() {
     (state) => state.tokens
   );
 
-
   async function getProduto() {
-    await buscaProduto("/produtos/todos", setProdutos)
+    await buscaProduto("/produtos/todos", setProdutos, {
+      headers: {
+        'Authorization': token
+      }
+    })
+    
   }
 
   useEffect(() => {

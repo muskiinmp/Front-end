@@ -106,7 +106,7 @@ function DeletarProduto() {
                     <CardActions>
                         <Box display="flex" justifyContent="start" ml={1.0} mb={2} >
                             <Box mx={2}>
-                                <Button className='text-decoration-none' onClick={sim} variant="contained" size='large' color="primary">
+                                <Button  onClick={sim} variant="contained" size='large' color="primary">
                                     Sim
                                 </Button>
                             </Box>
