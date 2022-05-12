@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import { useNavigate, Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import Produto from "../../../model/Produto";
-import { busca } from "../../../service/Service";
+import { busca, buscaProduto } from "../../../service/Service";
 import { TokenState } from "../../../store/tokens/tokenReducer";
 
 import './ListaProduto.css';
@@ -20,28 +20,8 @@ function ListaProduto() {
   );
 
 
-  useEffect(() => {
-    if (token === "") {
-      toast.warn('Você precisa estar logado', {
-        position: "top-right",
-        autoClose: 2000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: false,
-        draggable: false,
-        theme: "colored",
-        progress: undefined,
-      });
-      history("/login")
-    }
-  }, [token])
-
   async function getProduto() {
-    await busca("/produtos/todos", setProdutos, {
-      headers: {
-        'Authorization': token
-      }
-    })
+    await buscaProduto("/produtos/todos", setProdutos)
   }
 
   useEffect(() => {
