@@ -7,6 +7,6 @@ interface Produto{
     preco: number
     descricao: string
     tamanho: string
-    categoria: Categoria
+    categoria?: Categoria | null
 }
 export default Produto

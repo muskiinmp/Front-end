@@ -46,6 +46,13 @@ function Navbar() {
                             Cadastrar categoria
                         </Typography>
                     </Box>
+                </Link>  
+                <Link to="/criarProduto" className = 'navegacao'>
+                    <Box mx={1} className='cursor'>
+                        <Typography variant="h6" color="inherit">
+                            Cadastrar Produto
+                        </Typography>
+                    </Box>
                 </Link>                      
         <Link to = '/login' className = 'navegacao'>
           <Box mx={1} style={{ cursor: "pointer" }} >
