@@ -26,21 +26,27 @@ function Navbar() {
         
         </Link>
         
-
+        <Link to="/produtos" className = 'navegacao'>
         <Box mx={1} style={{ cursor: "pointer" }} >
           <Typography variant="h6" color="inherit" >
            Produto
           </Typography>
-
         </Box>
-
+        </Link>
+        <Link to="/categorias" className = 'navegacao'>
         <Box mx={1} style={{ cursor: "pointer" }} >
           <Typography variant="h6" color="inherit" >
             Categoria
           </Typography>
-
         </Box>
-
+        </Link>
+        <Link to="/criarCategoria" className = 'navegacao'>
+                    <Box mx={1} className='cursor'>
+                        <Typography variant="h6" color="inherit">
+                            Cadastrar categoria
+                        </Typography>
+                    </Box>
+                </Link>                      
         <Link to = '/login' className = 'navegacao'>
           <Box mx={1} style={{ cursor: "pointer" }} >
             <Typography variant="h6" color="inherit" >
