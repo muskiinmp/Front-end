@@ -1,17 +1,16 @@
 import React, { ChangeEvent, useEffect, useState } from 'react'
 import { Box, Button, Grid, TextField, Typography } from '@material-ui/core'
 import { Link, useNavigate } from 'react-router-dom';
-import useLocalStorage from 'react-use-localstorage';
 import { login } from '../../service/Service';
 import UsuarioLogin from '../../model/UsuarioLogin';
 
 import './Login.css';
 import { useDispatch } from 'react-redux';
 import { addToken } from '../../store/tokens/actions';
+import { toast } from 'react-toastify';
 
 
 function Login() {
-
 
     let history = useNavigate()
     const dispatch = useDispatch()
@@ -44,11 +43,29 @@ function Login() {
         e.preventDefault();
         try {
             await login('/usuarios/login', usuarioLogin, setToken)
-            alert("Usuário logado com sucesso");
+            toast.success('Usuário logado com sucesso', {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined,
+            });
 
         } catch (error) {
-            alert("Dados do usuário inconsistentes");
-        };
+            toast.error('Dados do usuário inconsistentes', {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined,
+            });
+        }
 
     }
 

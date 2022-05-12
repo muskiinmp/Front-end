@@ -22,7 +22,7 @@ function CadastroProduto() {
         descricao: ''
     })
 
-    const[categorias,setCategorias]= useState<Categoria[]>([])
+    const [categorias, setCategorias]= useState<Categoria[]>([])
 
     const [produto, setProduto] = useState<Produto>({
         id: 0,
@@ -118,7 +118,7 @@ function CadastroProduto() {
         <Container maxWidth="sm" className="topo">
             <form onSubmit={onSubmit}>
                 <Typography variant="h3" color="textSecondary" component="h1" align="center" >Criação de Produto</Typography>
-                <TextField value={produto.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)} id="nome" label="nome" variant="outlined" name="nome " margin="normal" fullWidth />
+                <TextField value={produto.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)} id="nome" label="nome" variant="outlined" name="nome" margin="normal" fullWidth />
                 <TextField value={produto.quantidade} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)} id="quantidade" label="quantidade" variant="outlined" name="quantidade" margin="normal" fullWidth />
                 <TextField value={produto.preco} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)} id="preco" label="Preço" variant="outlined" name="preco" required margin="normal" fullWidth />
                 <TextField value={produto.tamanho} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)} id="tamanho" label="Tamanho" variant="outlined" name="tamanho" margin="normal" fullWidth />
@@ -140,14 +140,14 @@ function CadastroProduto() {
 
                         {
                             categorias.map(item => (
-                                <MenuItem value={item.id}>{item.descricao}</MenuItem>
+                                <MenuItem value={item.id}>{item.categoria}</MenuItem>
+
                             ))
                         }
 
                     </Select>
-                    <FormHelperText>Escolha um tema para a postagem</FormHelperText>
-                    
-                    <Button type="submit" variant="contained" className='btnFinalizar'>
+                    <FormHelperText>Escolha uma categoria para a postagem</FormHelperText>
+                    <Button type="submit" variant="contained" >
                         Finalizar
                     </Button>
                 </FormControl>
