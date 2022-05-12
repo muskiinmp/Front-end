@@ -7,6 +7,8 @@ import Produto from "../../../model/Produto";
 import { busca } from "../../../service/Service";
 import { TokenState } from "../../../store/tokens/tokenReducer";
 
+import './ListaProduto.css';
+
 function ListaProduto() {
 
   let history = useNavigate()
@@ -59,7 +61,7 @@ function ListaProduto() {
                 </Typography>
 
                 <Typography variant="h5" component="h2">
-                  {produto.descricao}
+                  {produto.nome}
                 </Typography>
 
               </CardContent>
@@ -67,7 +69,7 @@ function ListaProduto() {
               <CardActions>
                 <Box display="flex" justifyContent="center" mb={1.5} >
 
-                  <Link to={`/deletarProduto/${produto.id}`}>
+                  <Link className="text-decoration-none" to={`/deletarProduto/${produto.id}`}>
                     <Box mx={1}>
                       <Button variant="contained" size='small' >
                         Deletar
@@ -75,7 +77,7 @@ function ListaProduto() {
                     </Box>
                   </Link>
 
-                  <Link to={`/criarProduto/${produto.id}`} >
+                  <Link className="text-decoration-none" to={`/criarProduto/${produto.id}`} >
                     <Box mx={1}>
                       <Button variant="contained" size='small' >
                         Atualizar

@@ -1,4 +1,4 @@
-import { Box, Button, Grid, TextField, Typography } from '@material-ui/core'
+import { Box, Button, FormHelperText, Grid, TextField, Typography } from '@material-ui/core'
 import React, { useState, useEffect, ChangeEvent } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import Usuario from '../../model/Usuario'
@@ -99,7 +99,7 @@ function CadastroUsuario() {
                             variant='outlined'
                             name='nome'
                             margin='normal'
-                            placeholder='Digite o seu nome'                
+                            placeholder='Digite no mínimo 5 caracteres'                
                             required
                             fullWidth
                             value={user.nome}
@@ -115,7 +115,7 @@ function CadastroUsuario() {
                             variant='outlined'
                             name='usuario'
                             margin='normal'
-                            placeholder='Digite um e-mail'
+                            placeholder='Digite um e-mail válido'
                             required
                             fullWidth
                             value={user.usuario}
@@ -130,7 +130,7 @@ function CadastroUsuario() {
                             variant='outlined'
                             name='senha'
                             margin='normal'
-                            placeholder='Digite a senha'
+                            placeholder='Digite no mínimo 8 caracteres'
                             type='password'
                             required
                             fullWidth
@@ -152,6 +152,7 @@ function CadastroUsuario() {
                             fullWidth
                             value={confirmarSenha}
                             onChange={(e: ChangeEvent<HTMLInputElement>) => confirmarSenhaHandle(e)}
+                            
                         >
                             Confirmar senha
 
@@ -171,6 +172,7 @@ function CadastroUsuario() {
                         >
                             Data de nascimento
                         </TextField>
+                        <FormHelperText>*Campo obrigatório</FormHelperText>
                         <Box>
                             <Button
                                 type='submit'

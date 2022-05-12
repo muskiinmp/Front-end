@@ -1,4 +1,4 @@
-import { Button, Container, TextField, Typography } from '@material-ui/core';
+import { Button, Container, FormHelperText, TextField, Typography } from '@material-ui/core';
 import React, { ChangeEvent, useEffect, useState } from 'react'
 import { useSelector } from 'react-redux';
 
@@ -106,8 +106,9 @@ function CadastroCategoria() {
         <Container maxWidth="sm" className="topo">
             <form onSubmit={onSubmit}>
                 <Typography variant="h3" color="textSecondary" component="h1" align="center" >Criação de categoria</Typography>
-                <TextField value={categoria.categoria} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="categoria" label="categoria" variant="outlined" name="categoria" margin="normal" fullWidth />
-                <TextField value={categoria.descricao} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="descricao" label="descricao" variant="outlined" name="descricao" margin="normal" fullWidth />
+                <TextField value={categoria.categoria} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="categoria" placeholder="Digite no máximo 50 caracteres" label="Categoria" variant="outlined" name="categoria" margin="normal" required fullWidth />
+                <TextField value={categoria.descricao} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="descricao" placeholder="Digite no máximo 500 caracteres" label="Descrição" variant="outlined" name="descricao" margin="normal" fullWidth />
+                <FormHelperText>*Campo obrigatório</FormHelperText>
                 <Button type="submit" variant="contained" className='btnFinalizar'>
                     Finalizar
                 </Button>
