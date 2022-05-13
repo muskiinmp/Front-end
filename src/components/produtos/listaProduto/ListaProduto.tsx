@@ -45,7 +45,10 @@ function ListaProduto() {
                 </Typography>
 
                 <Typography variant="h5" component="h2">
-                  {produto.nome}
+                  {produto.nome}<br/>
+                  {produto.descricao}<br/>
+                tamanho: {produto.tamanho}<br/>
+                R$: {produto.preco}
                 </Typography>
 
               </CardContent>
