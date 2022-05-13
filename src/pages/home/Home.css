@@ -1,5 +1,6 @@
 .caixa{
     background-color: #c8946e;
+    justify-items: center;
 }
 
 .carrosel{
@@ -26,4 +27,7 @@
 
 .teste{
     padding: 5px;
+}
+.testeGrid{
+    justify-items: center!important;
 }

@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react';
 import './Home.css';
-import { Grid, Box, Typography } from '@material-ui/core';
+import { Grid, Box, Typography, makeStyles, Card, CardActionArea, CardMedia, CardContent, CardActions, Button } from '@material-ui/core';
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../store/tokens/tokenReducer';
 import { toast } from 'react-toastify';
+import CarouselComponent from '../../components/carousel/CarouselComponent';
 
 function Home() {
 
@@ -14,10 +15,21 @@ function Home() {
     (state) => state.tokens
   )
 
+  const useStyles = makeStyles({
+    root: {
+      maxWidth: 242,
+    },
+    media: {
+      height: 258,
+    },
+  });
+  const classes = useStyles();
+
   return (
     <>
       <Grid container direction='row' className='caixa' justifyContent='center'>
-        <Grid item className='carrosel'>
+        <Grid item xs={12}>
+          <CarouselComponent />
         </Grid>
         <Grid xs={12} container item direction='row' alignItems='flex-start' className='teste, caixa'>
           <Box>
@@ -25,18 +37,102 @@ function Home() {
             <Typography variant='h5' className='titulo'>Novidades esperando por você</Typography>
           </Box>
         </Grid>
-        <Grid container justifyContent='center'>
-          <Grid xs={3} item >
-            <img src="https://static.wixstatic.com/media/36ee3b_83da74e02c14400cbe9a0a204e0309f3~mv2.jpg/v1/fill/w_224,h_334,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/ED5A1591_JPG.jpg" alt="" />
+        <Grid container item className='testeGrid'>
+          <Grid xs={3} item className='testeGrid'>
+            <Card className={classes.root}>
+              <CardActionArea>
+                <CardMedia
+                  className={classes.media}
+                  image="https://static.wixstatic.com/media/36ee3b_96453415d89146de90effe2a671c30b3~mv2.jpg/v1/fill/w_373,h_559,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/IMG_9874_edited_edited_edited.jpg"
+                  title="Contemplative Reptile"
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    Nome produto
+                  </Typography>
+                  <Typography variant="body2" color="textSecondary" component="p">
+                    Descrição??
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                <Button size="small" color="primary">
+                  Colocar no carrinho
+                </Button>
+              </CardActions>
+            </Card>
           </Grid>
-          <Grid xs={3} item>
-            <img src="https://static.wixstatic.com/media/36ee3b_63493928d6144b3a903850e0f33accc2~mv2.jpg/v1/fill/w_224,h_336,al_c,q_85,usm_0.66_1.00_0.01/36ee3b_63493928d6144b3a903850e0f33accc2~mv2.webp" alt="" />
+          <Grid xs={3} item className='testeGrid'>
+            <Card className={classes.root}>
+              <CardActionArea>
+                <CardMedia
+                  className={classes.media}
+                  image="https://static.wixstatic.com/media/36ee3b_96453415d89146de90effe2a671c30b3~mv2.jpg/v1/fill/w_373,h_559,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/IMG_9874_edited_edited_edited.jpg"
+                  title="Contemplative Reptile"
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    Nome produto
+                  </Typography>
+                  <Typography variant="body2" color="textSecondary" component="p">
+                    Descrição??
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                <Button size="small" color="primary">
+                  Colocar no carrinho
+                </Button>
+              </CardActions>
+            </Card>
           </Grid>
-          <Grid xs={3} item >
-            <img src="https://static.wixstatic.com/media/36ee3b_cec85f364c4e498c870477e7655d4f67~mv2.jpg/v1/fill/w_224,h_336,al_c,q_85,usm_0.66_1.00_0.01/36ee3b_cec85f364c4e498c870477e7655d4f67~mv2.webp" alt="" />
+          <Grid xs={3} item className='testeGrid'>
+            <Card className={classes.root}>
+              <CardActionArea>
+                <CardMedia
+                  className={classes.media}
+                  image="https://static.wixstatic.com/media/36ee3b_96453415d89146de90effe2a671c30b3~mv2.jpg/v1/fill/w_373,h_559,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/IMG_9874_edited_edited_edited.jpg"
+                  title="Contemplative Reptile"
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    Nome produto
+                  </Typography>
+                  <Typography variant="body2" color="textSecondary" component="p">
+                    Descrição??
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                <Button size="small" color="primary">
+                  Colocar no carrinho
+                </Button>
+              </CardActions>
+            </Card>
           </Grid>
-          <Grid xs={2} item>
-            <img src="https://static.wixstatic.com/media/36ee3b_9b81fb6937e64afcaded382bb2c5d308~mv2.jpg/v1/fill/w_224,h_336,al_c,q_85,usm_0.66_1.00_0.01/36ee3b_9b81fb6937e64afcaded382bb2c5d308~mv2.webp" alt="" />
+          <Grid xs={3} item className='testeGrid'>
+            <Card className={classes.root}>
+              <CardActionArea>
+                <CardMedia
+                  className={classes.media}
+                  image="https://static.wixstatic.com/media/36ee3b_96453415d89146de90effe2a671c30b3~mv2.jpg/v1/fill/w_373,h_559,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/IMG_9874_edited_edited_edited.jpg"
+                  title="Contemplative Reptile"
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    Nome produto
+                  </Typography>
+                  <Typography variant="body2" color="textSecondary" component="p">
+                    Descrição??
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                <Button size="small" color="primary">
+                  Colocar no carrinho
+                </Button>
+              </CardActions>
+            </Card>
           </Grid>
 
         </Grid>
@@ -46,5 +142,4 @@ function Home() {
     </>
   )
 }
-
 export default Home
