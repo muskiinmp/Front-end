@@ -21,6 +21,7 @@ function Home() {
     },
     media: {
       height: 258,
+      width: 242
     },
   });
   const classes = useStyles();
@@ -37,8 +38,8 @@ function Home() {
             <Typography variant='h5' className='titulo'>Novidades esperando por você</Typography>
           </Box>
         </Grid>
-        <Grid container item className='testeGrid'>
-          <Grid xs={3} item className='testeGrid'>
+        <Grid container item className='testeGrid' justifyContent='center' alignContent='center'>
+          <Grid container xs={3} item className='testeGrid'>
             <Card className={classes.root}>
               <CardActionArea>
                 <CardMedia
@@ -62,7 +63,7 @@ function Home() {
               </CardActions>
             </Card>
           </Grid>
-          <Grid xs={3} item className='testeGrid'>
+          <Grid container xs={3} item className='testeGrid'>
             <Card className={classes.root}>
               <CardActionArea>
                 <CardMedia
@@ -86,7 +87,7 @@ function Home() {
               </CardActions>
             </Card>
           </Grid>
-          <Grid xs={3} item className='testeGrid'>
+          <Grid container xs={3} item className='testeGrid'>
             <Card className={classes.root}>
               <CardActionArea>
                 <CardMedia
@@ -110,7 +111,7 @@ function Home() {
               </CardActions>
             </Card>
           </Grid>
-          <Grid xs={3} item className='testeGrid'>
+          <Grid container xs={3} item className='testeGrid'>
             <Card className={classes.root}>
               <CardActionArea>
                 <CardMedia

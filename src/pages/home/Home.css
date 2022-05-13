@@ -30,4 +30,5 @@
 }
 .testeGrid{
     justify-items: center!important;
+    justify-content: center;
 }
