@@ -1,11 +1,11 @@
-import { Button, Container, FormControl, FormHelperText, InputLabel, Select, MenuItem, TextField, Typography } from '@material-ui/core';
+import { Button, Container, FormControl, FormHelperText, InputLabel, Select, MenuItem, TextField, Typography, RadioGroup, FormControlLabel, Radio, FormLabel } from '@material-ui/core';
 import React, { ChangeEvent, useEffect, useState } from 'react'
 import { useSelector } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import Categoria from '../../../model/Categoria';
 import Produto from '../../../model/Produto'
-import { buscaId, post, put,busca } from '../../../service/Service';
+import { buscaId, post, put, busca } from '../../../service/Service';
 import { TokenState } from '../../../store/tokens/tokenReducer';
 
 function CadastroProduto() {
@@ -16,13 +16,13 @@ function CadastroProduto() {
         (state) => state.tokens
     )
 
-    const[categoria,setCategoria]= useState<Categoria>({
+    const [categoria, setCategoria] = useState<Categoria>({
         id: 0,
         categoria: '',
         descricao: ''
     })
 
-    const [categorias, setCategorias]= useState<Categoria[]>([])
+    const [categorias, setCategorias] = useState<Categoria[]>([])
 
     const [produto, setProduto] = useState<Produto>({
         id: 0,
@@ -82,7 +82,7 @@ function CadastroProduto() {
     function updatedProduto(e: ChangeEvent<HTMLInputElement>) {
         setProduto({
             ...produto,
-            [e.target.name]: e.target.value, 
+            [e.target.name]: e.target.value,
             categoria: categoria
         })
         console.log(categoria)
@@ -90,7 +90,7 @@ function CadastroProduto() {
 
     async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault()
-        console.log("product " + JSON.stringify(produto))
+        console.log("product " + JSON.stringify(produto.tamanho))
 
         if (id !== undefined) {
             try {
@@ -166,11 +166,26 @@ function CadastroProduto() {
                 <TextField value={produto.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)} id="nome" label="Nome" variant="outlined" name="nome" margin="normal" required fullWidth />
                 <TextField value={produto.quantidade} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)} id="quantidade" label="Quantidade" variant="outlined" name="quantidade" margin="normal" fullWidth />
                 <TextField value={produto.preco} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)} id="preco" label="Preço" variant="outlined" name="preco" required margin="normal" fullWidth />
-                <TextField value={produto.tamanho} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)} id="tamanho" label="Tamanho" variant="outlined" name="tamanho" margin="normal" fullWidth />
+
+                <FormLabel id="demo-radio-buttons-group-label">Tamanho</FormLabel>
+                <RadioGroup
+                    aria-labelledby="demo-radio-buttons-group-label"
+                    defaultValue="female"
+                    name="radio-buttons-group"
+                    onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)}
+
+                >
+                    <FormControlLabel value="PP" name = 'tamanho' control={<Radio />} label="PP" />
+                    <FormControlLabel value="P" name = 'tamanho' control={<Radio />} label="P" />
+                    <FormControlLabel value="M" name = 'tamanho' control={<Radio />} label="M" />
+                    <FormControlLabel value="G" name = 'tamanho' control={<Radio />} label="G" />
+                    <FormControlLabel value="GG" name = 'tamanho' control={<Radio />} label="GG" />
+                </RadioGroup>
+
                 <TextField value={produto.descricao} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)} id="descricao" placeholder='Máximo de 1000 caracteres' label="Descrição" variant="outlined" name="descricao" margin="normal" fullWidth />
-                
+
                 <FormControl>
-                <InputLabel id="demo-simple-select-helper-label"> Categoria </InputLabel>
+                    <InputLabel id="demo-simple-select-helper-label"> Categoria </InputLabel>
                     <Select
                         labelId="demo-simple-select-helper-label"
                         id="demo-simple-select-helper"
@@ -179,9 +194,9 @@ function CadastroProduto() {
                                 'Authorization': token
                             }
                         })}>
-                        
-                        {   
-                               categorias.map(categoria => (
+
+                        {
+                            categorias.map(categoria => (
                                 <MenuItem value={categoria.id}>{categoria.categoria}</MenuItem>
                             ))
                         }
