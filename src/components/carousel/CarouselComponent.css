@@ -1,0 +1,18 @@
+img {
+    width: 1246px;
+    height: 500px;
+    object-fit: cover;
+}
+
+/* square buttons */
+.rec.rec-arrow {
+    background-color: #C07A51;
+    color: #785846;
+}
+.rec.rec-arrow:hover {
+    background-color: #C07A51!important;
+    color: #785846!important;
+}
+.rec.rec-arrow:disabled {
+    visibility: hidden;
+}
