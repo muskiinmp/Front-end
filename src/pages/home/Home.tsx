@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../store/tokens/tokenReducer';
 import { toast } from 'react-toastify';
+import Frame1 from '../../assets/Frame1.png'
 
 function Home() {
 
@@ -17,7 +18,8 @@ function Home() {
   return (
     <>
       <Grid container direction='row' className='caixa' justifyContent='center'>
-        <Grid item className='carrosel'>
+        <Grid item className='carrosel' style={{marginTop: "40px"}}>
+          <img src={Frame1}></img>
         </Grid>
         <Grid xs={12} container item direction='row' alignItems='flex-start' className='teste, caixa'>
           <Box>
