@@ -34,9 +34,9 @@ function Navbar() {
 
   if (token != "") {
     navbarComponent=
-    <AppBar position="static" style= {{background: "#DA781D"}}>
+    <AppBar position="static" style= {{background:"#CB8244"}}>
       <Toolbar variant="dense">
-        <Box style={{display: "flex", flexDirection: "row", justifyContent: "space-between", width: "100%", height: "40px"}} >
+        <Box style={{display: "flex", flexDirection: "row", justifyContent: "space-between", width: "100%", height: "60px"}} >
           <div style={{display: "flex", flexDirection: "row", width: "30%"}}>
           <Link to='home' className='navegacao'>
             <Box mx={1} style={{ cursor: "pointer" }} >
@@ -81,7 +81,7 @@ function Navbar() {
           </div>
 
     <div>
-      <img src={img} style={{width: "200px", height: "100px", marginLeft: "-130%" }}/>
+      <img src={img} style={{width: "200px", height: "140px", marginLeft: "-130%" }}/>
     </div>
 
 
@@ -102,9 +102,9 @@ function Navbar() {
 
   }else{
     navbarComponent=
-    <AppBar position="static" style= {{background: "#DA781D"}}>
+    <AppBar position="static" style= {{background: "#CB8244"}}>
       <Toolbar variant="dense">
-        <Box style={{display: "flex", flexDirection: "row", justifyContent: "space-between", width: "100%", height: "40px"}} >
+        <Box style={{display: "flex", flexDirection: "row", justifyContent: "space-between", width: "100%", height: "60px"}} >
           <div style={{display: "flex", flexDirection: "row", width: "30%"}}>
           <Link to='home' className='navegacao'>
             <Box mx={1} style={{ cursor: "pointer" }} >
@@ -127,7 +127,7 @@ function Navbar() {
           </div>
 
           <div>
-      <img src={img} style={{width: "200px", height: "100px", marginLeft: "-130%" }}/>
+      <img src={img} style={{width: "200px", height: "140px", marginLeft: "-130%" }}/>
     </div>
 
 
