@@ -1,4 +1,4 @@
-import { Button, Container, FormHelperText, TextField, Typography } from '@material-ui/core';
+import { Button, Container, FormHelperText, Grid, TextField, Typography } from '@material-ui/core';
 import React, { ChangeEvent, useEffect, useState } from 'react'
 import { useSelector } from 'react-redux';
 
@@ -105,7 +105,7 @@ function CadastroCategoria() {
     }
 
     return (
-        <Container maxWidth="sm" className="topo">
+        <Grid container className="containerCategoria">
             <Typography variant="h3" className="tituloCategoria" component="h1" align="center" >Cadastrar Categoria</Typography>
             <form className="caixaCategoria" onSubmit={onSubmit}>
                 <Typography variant="h3" className="subtituloCategoria" component="h3" >Nome Categoria</Typography>
@@ -116,7 +116,7 @@ function CadastroCategoria() {
                     Cadastrar
                 </Button>
             </form>
-        </Container>
+        </Grid>
     )
 }
 export default CadastroCategoria

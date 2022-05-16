@@ -1,92 +1,82 @@
-.caixaProduto {
-    width: 85vw;
-    height: 455px;
+.containerProduto {
+    display: column!important;
+}
+.teste2{
+    display:flex;
+}
 
-    position: absolute;
-    left: 6.04%;
-    right: 6.11%;
-    top: 26.95%;
-    bottom: 16.7%;
-    background: rgba(120, 88, 70, 0.29) !important;
+.caixaProduto {
+    width: 70vw;
+    height: 600px;
+    margin-bottom: 10vh;
+    margin-left: 18vh;
+    background: rgba(120, 88, 70, 0.29);
     mix-blend-mode: normal;
     border-radius: 10px;
+
 }
 
 .tituloProduto {
-    margin-top: 5vh;
+    margin: 20px 0px!important;
     color: #A64208 !important;
 }
 
+.titulos1{
+    display: flex;
+    padding-top: 30px;
+}
+
 .subtituloProduto {
+    padding: 0px 0px 0px 35px!important;
+
+    font-family: 'Jacques Francois';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px!important;
+    line-height: 33px!important;
+    text-align: left;
 
     color: #B6917B;
 }
 
 .subtituloProduto2 {
-    position: absolute;
-    left: 57%;
-    right: 27.22%;
-    top: 5%;
-    bottom: 63.1%;
+    padding: 0px 0px 0px 445px!important;
 
     font-family: 'Jacques Francois';
     font-style: normal;
     font-weight: 400;
-    font-size: 25px;
-    line-height: 33px;
+    font-size: 25px!important;
+    line-height: 33px!important;
     text-align: center;
 
     color: #B6917B;
 }
-
-.subtituloProduto3 {
-
-    color: #B6917B;
-}
-
-.subtituloProduto4 {
-
-    color: #B6917B;
-}
-
-.subtituloProduto5 {
-
+.selecaoCategoria{
+    font-family: 'Jacques Francois';
+    font-style: normal;
+    font-size: 25px!important;
+    font-weight: 400;
     color: #B6917B;
 }
 
 .nomeProduto {
-    width: 561;
-    height: 71;
 
-    position: absolute;
-    left: 11%;
-    right: 45%;
-    top: 10%;
-    bottom: 72.7%;
+    margin-left: 35px !important;
+    width: 500px;
 
     background: #f1f1f1 !important;
     mix-blend-mode: screen;
     border-radius: 3px;
 }
-
-.tamanhoProduto {
-    position: absolute;
-    left: 60%;
-    right: 12%;
-    top: 15%;
-    bottom: 75%;
-
+.tamanhoProduto{
+    margin-left: 10px;
+    width: 350px;
 }
 
 .quantidadeProduto {
     width: 209px;
     height: 56px;
-
-    position: absolute;
-    left: 11%;
-    right: 60%;
-    top: 33%;
-    bottom: 30%;
+    margin: 50px 30px 0px 35px!important ;
 
     background: #f1f1f1 !important;
     mix-blend-mode: screen;
@@ -96,36 +86,25 @@
 .precoProduto {
     width: 209px;
     height: 56px;
-
-    position: absolute;
-    left: 35%;
-    right: 39.93%;
-    top: 33%;
-    bottom: 43.95%;
+    margin: 50px 15px 0px 50px!important ;
 
     background: #f1f1f1 !important;
     mix-blend-mode: screen;
     border-radius: 3px;
 }
-
 .categoriaProduto {
-    position: absolute;
-    left: 60%;
-    right: 15%;
-    top: 35%;
-    bottom: 60%;
+    margin: 50px 0px 0px 0px!important ;
+    width: 300px!important;
+}
+.categoriaProdutoTeste{
+    display: flex;
 }
 
 .descricaoProduto {
-    width: 890px;
+    width: 64vw;
     height: 150px;
 
-    position: absolute;
-    left: -196%;
-    right: 10%;
-    top: 350%;
-    bottom: 18.07%;
-
+    margin: 80px 0px 0px 35px!important;
 
     background: #f1f1f1 !important;
     mix-blend-mode: screen;
@@ -133,16 +112,14 @@
 }
 
 .btnProduto {
+    font-family: 'Jacques Francois';
+    font-style: normal;
+
     width: 217px;
     height: 62px;
+    margin: 30px 0px 0px 330px!important;
+    border-radius: 20px!important;
 
-    position: absolute;
-    left: -77%;
-    right: 50%;
-    top: 1400%;
-    bottom: 19.73%;
-
-    border-radius: 20px;
     color: #B6917B;
     font-size: 20px;
 }
