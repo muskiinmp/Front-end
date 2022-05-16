@@ -5,8 +5,13 @@ import { Link, useNavigate } from 'react-router-dom'
 import { toast } from "react-toastify";
 import { addToken } from "../../../store/tokens/actions";
 import { TokenState } from "../../../store/tokens/tokenReducer";
-import './Navbar.css'
-import img from "../../../assets/21.png"
+import './Navbar.css';
+import img from "../../../assets/21.png";
+import MenuNav from "../../menuNav/MenuNav";
+import MenuNav2 from "../../menuNav2/MenuNav2";
+
+
+
 function Navbar() {
 
   let history = useNavigate()
@@ -33,118 +38,103 @@ function Navbar() {
   var navbarComponent;
 
   if (token != "") {
-    navbarComponent=
-    <AppBar position="static" style= {{background: "#DA781D"}}>
-      <Toolbar variant="dense">
-        <Box style={{display: "flex", flexDirection: "row", justifyContent: "space-between", width: "100%", height: "40px"}} >
-          <div style={{display: "flex", flexDirection: "row", width: "30%"}}>
-          <Link to='home' className='navegacao'>
-            <Box mx={1} style={{ cursor: "pointer" }} >
-              <p style= {{fontFamily: "Jacques Francois"}} >
-                Home 
-              </p>
-            </Box>
+    navbarComponent =
+      <AppBar position="static" style={{ background: "#DA781D" }}>
+        <Toolbar variant="dense">
+          <Box style={{ display: "flex", flexDirection: "row", justifyContent: "space-between", width: "100%", height: "40px" }} >
+            <div style={{ display: "flex", alignItems:'center', flexDirection: "row", width: "30%" }}>
 
-          </Link>
+              <Link to='home' className='navegacao'>
+                <Box mx={1} style={{ cursor: "pointer" }} >
+                  <p style={{ fontFamily: "Jacques Francois", fontSize: '20px'}} >
+                    Home
+                  </p>
+                </Box>
 
-          <Link to="/produtos" className='navegacao'>
-            <Box mx={1} style={{ cursor: "pointer" }} >
-              <p style= {{fontFamily: "Jacques Francois"}} >
-                Produto
-              </p>
-            </Box>
-          </Link>
+              </Link>
 
-          <Link to="/categorias" className='navegacao'>
-            <Box mx={1} style={{ cursor: "pointer" }} >
-              <p style= {{fontFamily: "Jacques Francois"}}>
-                Categoria
-              </p>
-            </Box>
-          </Link>
+                <Box mx={1} style={{ cursor: "pointer" }} >
+                  <p style={{ fontFamily: "Jacques Francois" }} >
+                    <MenuNav />
+                  </p>
+                </Box>
 
-          <Link to="/criarCategoria" className='navegacao'>
-            <Box mx={1} className='cursor'>
-              <p style= {{fontFamily: "Jacques Francois"}}>
-                Cadastrar categoria
-              </p>
-            </Box>
-          </Link>
+              
+                <Box mx={1} style={{ cursor: "pointer" }} >
+                  <p style={{ fontFamily: "Jacques Francois" }}>
+                   <MenuNav2 />
+                  </p>
+                </Box>
+              
+            
+            </div>
 
-          <Link to="/criarProduto" className='navegacao'>
-            <Box mx={1} className='cursor'>
-              <p style= {{fontFamily: "Jacques Francois"}}>
-                Cadastrar Produto
-              </p>
-            </Box>
-          </Link>
-          </div>
-
-    <div>
-      <img src={img} style={{width: "200px", height: "100px", marginLeft: "-130%" }}/>
-    </div>
+            <div>
+              <img src={img} style={{ width: "200px", height: "100px", marginLeft: "-130%" }} />
+            </div>
 
 
-    <div>
-          <Link to='/login' className='navegacao'>
-            <Box mx={1} onClick={goLogout} style={{ cursor: "pointer", color: 'white' }}>
-              <p >
-                Logout
-              </p>
-            </Box>
-          </Link>
-          </div>
+            <div style={{display: "flex", alignItems:'center', flexDirection: "row"}}>
+              <Link to='/login' className='navegacao'>
+                <Box mx={1} onClick={goLogout} style={{ cursor: "pointer", color: 'white', fontSize:'20px', fontFamily: "Jacques Francois" }}>
+                  <p >
+                    Logout
+                  </p>
+                </Box>
+              </Link>
+            </div>
 
-        </Box>
+          </Box>
 
-      </Toolbar>
-    </AppBar>
+        </Toolbar>
+      </AppBar>
 
-  }else{
-    navbarComponent=
-    <AppBar position="static" style= {{background: "#DA781D"}}>
-      <Toolbar variant="dense">
-        <Box style={{display: "flex", flexDirection: "row", justifyContent: "space-between", width: "100%", height: "40px"}} >
-          <div style={{display: "flex", flexDirection: "row", width: "30%"}}>
-          <Link to='home' className='navegacao'>
-            <Box mx={1} style={{ cursor: "pointer" }} >
-              <p style= {{fontFamily: "Jacques Francois"}} >
-                Home 
-              </p>
-            </Box>
+  } else {
+    navbarComponent =
+      <AppBar position="static" style={{ background: "#DA781D" }}>
+        <Toolbar variant="dense">
+          <Box style={{ display: "flex", flexDirection: "row", justifyContent: "space-between", width: "100%", height: "40px" }} >
+            <div style={{ display: "flex", alignItems:'center', flexDirection: "row", width: "30%" }}>
 
-          </Link>
+              <Link to='home' className='navegacao'>
+                <Box mx={1} style={{ cursor: "pointer" }} >
+                  <p style={{ fontFamily: "Jacques Francois", fontSize: '20px'}} >
+                    Home
+                  </p>
+                </Box>
 
-          
-          <Link to='/contato' className='navegacao'>
-            <Box mx={1} className='cursor' >
-            <p style= {{fontFamily:"Jacques Francois"}} >
-                Contato
-              </p>
-            </Box>
-          </Link>
-
-          </div>
-
-          <div>
-      <img src={img} style={{width: "200px", height: "100px", marginLeft: "-130%" }}/>
-    </div>
+              </Link>
 
 
-    <div>
-          <Link to='/login' className='navegacao'>
-            <Box mx={1} onClick={goLogout} style={{ cursor: "pointer", color: 'white' }}>
-              <p >
-                Login
-              </p>
-            </Box>
-          </Link>
-          </div>
+              <Link to='/contato' className='navegacao'>
+                <Box mx={1} className='cursor' >
+                  <p style={{ fontFamily: "Jacques Francois", fontSize: '20px'}} >
+                    Contato
+                  </p>
+                </Box>
+              </Link>
 
-        </Box>
+            </div>
 
-      </Toolbar>
-    </AppBar>
+            <div>
+              <img src={img} style={{ width: "200px", height: "100px", marginLeft: "-130%" }} />
+            </div>
+
+
+            <div style={{display: "flex", alignItems:'center', flexDirection: "row"}}>
+              <Link to='/login' className='navegacao'>
+                <Box mx={1} onClick={goLogout} style={{ cursor: "pointer", color: 'white', fontSize:'20px', fontFamily: "Jacques Francois" }}>
+                  <p >
+                    Login
+                  </p>
+                </Box>
+              </Link>
+            </div>
+
+          </Box>
+
+        </Toolbar>
+      </AppBar>
   }
 
   return (

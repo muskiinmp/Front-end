@@ -1,12 +1,76 @@
-.text-decorator-none{
+.text-decorator-none {
     text-decoration: none;
 }
 
-.texto1{
+.vl {
+    position: absolute;
+    width: 700px;
+    height: 30px;
+    left: -310px;
+    background: #DA781D;
+    transform: rotate(-90deg);
+
+}
+
+.vl2 {
+    position: absolute;
+    width: 730px;
+    height: 30px;
+    left: -230px;
+    background: #DA781D;
+    transform: rotate(-90.01deg);
+}
+
+.caixa-login {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center;
+    margin: 0 !important;
+}
+
+.texto1 {
     font-weight: bold !important;
 }
 
-.imagem1{
+.bnt-cancelar {
+    display: flex;
+    justify-content: center;
+    gap: 15px !important;
+}
+
+.login-cad1 {
+    color: #D9663D;
+    font-size: 18px !important;
+}
+
+.login-cad2 {
+    color: #785846;
+    font-size: 18px !important;
+}
+
+.login-text {
+    color: #B6917B;
+}
+
+.btn-login {
+    width: 150px !important;
+    background-color: #E5E5E5 !important;
+    color: #B6917B !important;
+    border-radius: 17px !important;
+    text-transform: none !important;
+}
+
+.form-back {
+    padding: 0px !important;
+    justify-content: center !important;
+    align-items: center !important;
+    align-content: center !important;
+    background-color: #AE988D !important;
+    border-radius: 10px !important;
+}
+
+
+/*.imagem1 {
     background-image: url(https://i.imgur.com/gimcsi1.jpg);
     background-repeat: no-repeat;
     width: 100vh;
@@ -14,4 +78,4 @@
     background-size: cover;
     background-position: center;
 
-}
+}*/
