@@ -39,44 +39,43 @@ function Navbar() {
 
   if (token != "") {
     navbarComponent =
-      <AppBar position="static" style={{ background: "#DA781D" }}>
+      <AppBar position="static" style={{ background: "#CB8244" }}>
         <Toolbar variant="dense">
-          <Box style={{ display: "flex", flexDirection: "row", justifyContent: "space-between", width: "100%", height: "40px" }} >
-            <div style={{ display: "flex", alignItems:'center', flexDirection: "row", width: "30%" }}>
-
+          <Box style={{ display: "flex", flexDirection: "row", justifyContent: "space-between", width: "100%", height: "60px" }} >
+            <div style={{ display: "flex", flexDirection: "row", width: "30%" }}>
               <Link to='home' className='navegacao'>
                 <Box mx={1} style={{ cursor: "pointer" }} >
-                  <p style={{ fontFamily: "Jacques Francois", fontSize: '20px'}} >
+                  <p style={{ fontFamily: "Jacques Francois" }} >
                     Home
                   </p>
                 </Box>
 
               </Link>
 
-                <Box mx={1} style={{ cursor: "pointer" }} >
-                  <p style={{ fontFamily: "Jacques Francois" }} >
-                    <MenuNav />
-                  </p>
-                </Box>
+              <Box mx={1} style={{ cursor: "pointer" }} >
+                <p style={{ fontFamily: "Jacques Francois" }} >
+                  <MenuNav />
+                </p>
+              </Box>
 
-              
-                <Box mx={1} style={{ cursor: "pointer" }} >
-                  <p style={{ fontFamily: "Jacques Francois" }}>
-                   <MenuNav2 />
-                  </p>
-                </Box>
-              
-            
+
+              <Box mx={1} style={{ cursor: "pointer" }} >
+                <p style={{ fontFamily: "Jacques Francois" }}>
+                  <MenuNav2 />
+                </p>
+              </Box>
+
+
             </div>
 
             <div>
-              <img src={img} style={{ width: "200px", height: "100px", marginLeft: "-130%" }} />
+              <img src={img} style={{ width: "200px", height: "140px", marginLeft: "-130%" }} />
             </div>
 
 
-            <div style={{display: "flex", alignItems:'center', flexDirection: "row"}}>
+            <div style={{ display: "flex", alignItems: 'center', flexDirection: "row" }}>
               <Link to='/login' className='navegacao'>
-                <Box mx={1} onClick={goLogout} style={{ cursor: "pointer", color: 'white', fontSize:'20px', fontFamily: "Jacques Francois" }}>
+                <Box mx={1} onClick={goLogout} style={{ cursor: "pointer", color: 'white', fontSize: '20px', fontFamily: "Jacques Francois" }}>
                   <p >
                     Logout
                   </p>
@@ -87,28 +86,25 @@ function Navbar() {
           </Box>
 
         </Toolbar>
-      </AppBar>
+      </AppBar >
 
   } else {
     navbarComponent =
-      <AppBar position="static" style={{ background: "#DA781D" }}>
+      <AppBar position="static" style={{ background: "#CB8244" }}>
         <Toolbar variant="dense">
-          <Box style={{ display: "flex", flexDirection: "row", justifyContent: "space-between", width: "100%", height: "40px" }} >
-            <div style={{ display: "flex", alignItems:'center', flexDirection: "row", width: "30%" }}>
-
+          <Box style={{ display: "flex", flexDirection: "row", justifyContent: "space-between", width: "100%", height: "60px" }} >
+            <div style={{ display: "flex", flexDirection: "row", width: "30%" }}>
               <Link to='home' className='navegacao'>
                 <Box mx={1} style={{ cursor: "pointer" }} >
-                  <p style={{ fontFamily: "Jacques Francois", fontSize: '20px'}} >
+                  <p style={{ fontFamily: "Jacques Francois" }} >
                     Home
                   </p>
                 </Box>
-
               </Link>
-
 
               <Link to='/contato' className='navegacao'>
                 <Box mx={1} className='cursor' >
-                  <p style={{ fontFamily: "Jacques Francois", fontSize: '20px'}} >
+                  <p style={{ fontFamily: "Jacques Francois" }} >
                     Contato
                   </p>
                 </Box>
@@ -117,24 +113,29 @@ function Navbar() {
             </div>
 
             <div>
-              <img src={img} style={{ width: "200px", height: "100px", marginLeft: "-130%" }} />
+              <img src={img} style={{ width: "200px", height: "140px", marginLeft: "-130%" }} />
             </div>
 
-
-            <div style={{display: "flex", alignItems:'center', flexDirection: "row"}}>
-              <Link to='/login' className='navegacao'>
-                <Box mx={1} onClick={goLogout} style={{ cursor: "pointer", color: 'white', fontSize:'20px', fontFamily: "Jacques Francois" }}>
-                  <p >
-                    Login
-                  </p>
-                </Box>
-              </Link>
-            </div>
 
           </Box>
 
-        </Toolbar>
-      </AppBar>
+  
+
+
+          <div style={{ display: "flex", alignItems: 'center', flexDirection: "row" }}>
+            <Link to='/login' className='navegacao'>
+              <Box mx={1} onClick={goLogout} style={{ cursor: "pointer", color: 'white', fontSize: '20px', fontFamily: "Jacques Francois" }}>
+                <p >
+                  Login
+                </p>
+              </Box>
+            </Link>
+          </div>
+
+       
+
+      </Toolbar>
+      </AppBar >
   }
 
   return (

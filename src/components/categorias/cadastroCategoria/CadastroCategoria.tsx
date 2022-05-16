@@ -9,6 +9,8 @@ import Categoria from '../../../model/Categoria'
 import { buscaId, post, put } from '../../../service/Service';
 import { TokenState } from '../../../store/tokens/tokenReducer';
 
+import './CadastroCategoria.css';
+
 function CadastroCategoria() {
 
     let history = useNavigate();
@@ -104,17 +106,17 @@ function CadastroCategoria() {
 
     return (
         <Container maxWidth="sm" className="topo">
-            <form onSubmit={onSubmit}>
-                <Typography variant="h3" color="textSecondary" component="h1" align="center" >Criação de categoria</Typography>
-                <TextField value={categoria.categoria} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="categoria" placeholder="Digite no máximo 50 caracteres" label="Categoria" variant="outlined" name="categoria" margin="normal" required fullWidth />
-                <TextField value={categoria.descricao} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="descricao" placeholder="Digite no máximo 500 caracteres" label="Descrição" variant="outlined" name="descricao" margin="normal" fullWidth />
-                <FormHelperText>*Campo obrigatório</FormHelperText>
-                <Button type="submit" variant="contained" className='btnFinalizar'>
-                    Finalizar
+            <Typography variant="h3" className="tituloCategoria" component="h1" align="center" >Cadastrar Categoria</Typography>
+            <form className="caixaCategoria" onSubmit={onSubmit}>
+                <Typography variant="h3" className="subtituloCategoria" component="h3" >Nome Categoria</Typography>
+                <TextField className="nomeCategoria" value={categoria.categoria} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="categoria" placeholder="Digite no máximo 50 caracteres" variant="outlined" name="categoria" required />
+                <Typography variant="h3" className="subtituloCategoria2" component="h3" >Descrição</Typography>
+                <TextField className="descricaoCategoria" value={categoria.descricao} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="descricao" placeholder="Digite no máximo 500 caracteres" variant="outlined" name="descricao" multiline rows={5} maxRows={5} />
+                <Button type="submit" variant="contained" className='btnCategoria'>
+                    Cadastrar
                 </Button>
             </form>
         </Container>
     )
 }
-
 export default CadastroCategoria

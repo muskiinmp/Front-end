@@ -4,10 +4,12 @@
 }
 
 .titulo{
+    
     font-weight: bold !important;
     color: white;
     font-family: Roboto !important; 
     margin-left: 10px !important;   
+    font-size: "10px";
 }
 
 .imagem{
@@ -16,4 +18,10 @@
 
 .teste{
     padding: 5px;
+}
+
+.nomeProduto{
+    font-family: jaldi !important;
+    font-size: "20px" !important;
+    color: "#785846" !important;
 }
