@@ -1,4 +1,4 @@
-import { Button, Container, FormControl, FormHelperText, InputLabel, Select, MenuItem, TextField, Typography, RadioGroup, FormControlLabel, Radio, FormLabel } from '@material-ui/core';
+import { Button, Container, FormControl, FormHelperText, InputLabel, Select, MenuItem, TextField, Typography, FormLabel, RadioGroup, FormControlLabel, Radio, Grid } from '@material-ui/core';
 import React, { ChangeEvent, useEffect, useState } from 'react'
 import { useSelector } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
@@ -7,6 +7,8 @@ import Categoria from '../../../model/Categoria';
 import Produto from '../../../model/Produto'
 import { buscaId, post, put, busca } from '../../../service/Service';
 import { TokenState } from '../../../store/tokens/tokenReducer';
+
+import './CadastroProduto.css'
 
 function CadastroProduto() {
 

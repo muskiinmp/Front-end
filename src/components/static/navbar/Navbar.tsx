@@ -5,7 +5,12 @@ import { Link, useNavigate } from 'react-router-dom'
 import { toast } from "react-toastify";
 import { addToken } from "../../../store/tokens/actions";
 import { TokenState } from "../../../store/tokens/tokenReducer";
-import './Navbar.css'
+import './Navbar.css';
+import img from "../../../assets/21.png";
+import MenuNav from "../../menuNav/MenuNav";
+import MenuNav2 from "../../menuNav2/MenuNav2";
+
+
 
 function Navbar() {
 
@@ -33,123 +38,104 @@ function Navbar() {
   var navbarComponent;
 
   if (token != "") {
-    navbarComponent=
-    <AppBar position="static">
-      <Toolbar variant="dense">
-        <Box style={{ cursor: "pointer" }}>
-          <Typography variant="h5" color="inherit" >
-            MuSkin
-          </Typography>
+    navbarComponent =
+      <AppBar position="static" style={{ background: "#CB8244" }}>
+        <Toolbar variant="dense">
+          <Box style={{ display: "flex", flexDirection: "row", justifyContent: "space-between", width: "100%", height: "60px" }} >
+            <div style={{ display: "flex", flexDirection: "row", width: "30%" }}>
+              <Link to='home' className='navegacao'>
+                <Box mx={1} style={{ cursor: "pointer" }} >
+                  <p style={{ fontFamily: "Jacques Francois" }} >
+                    Home
+                  </p>
+                </Box>
 
-        </Box>
+              </Link>
 
-        <Box display='flex' justifyContent='start'>
-          <Link to='home' className='navegacao'>
-            <Box mx={1} style={{ cursor: "pointer" }} >
-              <Typography variant="h6" color="inherit" >
-                Home
-              </Typography>
-            </Box>
+              <Box mx={1} style={{ cursor: "pointer" }} >
+                <p style={{ fontFamily: "Jacques Francois" }} >
+                  <MenuNav />
+                </p>
+              </Box>
 
-          </Link>
 
-          <Link to="/produtos" className='navegacao'>
-            <Box mx={1} style={{ cursor: "pointer" }} >
-              <Typography variant="h6" color="inherit" >
-                Produto
-              </Typography>
-            </Box>
-          </Link>
-          <Link to="/categorias" className='navegacao'>
-            <Box mx={1} style={{ cursor: "pointer" }} >
-              <Typography variant="h6" color="inherit" >
-                Categoria
-              </Typography>
-            </Box>
-          </Link>
-          <Link to="/criarCategoria" className='navegacao'>
-            <Box mx={1} className='cursor'>
-              <Typography variant="h6" color="inherit">
-                Cadastrar categoria
-              </Typography>
-            </Box>
-          </Link>
-          <Link to="/criarProduto" className='navegacao'>
-            <Box mx={1} className='cursor'>
-              <Typography variant="h6" color="inherit">
-                Cadastrar Produto
-              </Typography>
-            </Box>
-          </Link>
-          
+              <Box mx={1} style={{ cursor: "pointer" }} >
+                <p style={{ fontFamily: "Jacques Francois" }}>
+                  <MenuNav2 />
+                </p>
+              </Box>
 
-          <Link to='contato' className='navegacao'>
-            <Box mx={1} style={{ cursor: "pointer" }} >
-              <Typography variant="h6" color="inherit" >
-                Contato
-              </Typography>
-            </Box>
-          </Link>
 
-          <Link to='/login' className='navegacao'>
-            <Box mx={1} onClick={goLogout} style={{ cursor: "pointer", color: 'white' }}>
-              <Typography variant="h6" color="inherit">
-                Logout
-              </Typography>
-            </Box>
-          </Link>
-        </Box>
+            </div>
 
-      </Toolbar>
-    </AppBar>
+            <div>
+              <img src={img} style={{ width: "200px", height: "140px", marginLeft: "-130%" }} />
+            </div>
 
-  }else{
-    navbarComponent=
-    <AppBar position="static">
-      <Toolbar variant="dense">
-        <Box style={{ cursor: "pointer" }}>
-          <Typography variant="h5" color="inherit" >
-            MuSkin
-          </Typography>
 
-        </Box>
+            <div style={{ display: "flex", alignItems: 'center', flexDirection: "row" }}>
+              <Link to='/login' className='navegacao'>
+                <Box mx={1} onClick={goLogout} style={{ cursor: "pointer", color: 'white', fontSize: '20px', fontFamily: "Jacques Francois" }}>
+                  <p >
+                    Logout
+                  </p>
+                </Box>
+              </Link>
+            </div>
 
-        <Box display='flex' justifyContent='start'>
-          <Link to='home' className='navegacao'>
-            <Box mx={1} style={{ cursor: "pointer" }} >
-              <Typography variant="h6" color="inherit" >
-                Home
-              </Typography>
-            </Box>
+          </Box>
 
-          </Link>
+        </Toolbar>
+      </AppBar >
 
-          <Link to="/produtos" className='navegacao'>
-            <Box mx={1} style={{ cursor: "pointer" }} >
-              <Typography variant="h6" color="inherit" >
-                Produto
-              </Typography>
-            </Box>
-          </Link>
-          <Link to='/contato' className='navegacao'>
-            <Box mx={1} style={{ cursor: "pointer" }} >
-              <Typography variant="h6" color="inherit" >
-                Contato
-              </Typography>
-            </Box>
-          </Link>
-          <Link to='/login' className='navegacao'>
-            <Box mx={1} style={{ cursor: "pointer" }} >
-              <Typography variant="h6" color="inherit" >
-                Login
-              </Typography>
-            </Box>
-          </Link>
+  } else {
+    navbarComponent =
+      <AppBar position="static" style={{ background: "#CB8244" }}>
+        <Toolbar variant="dense">
+          <Box style={{ display: "flex", flexDirection: "row", justifyContent: "space-between", width: "100%", height: "60px" }} >
+            <div style={{ display: "flex", flexDirection: "row", width: "30%" }}>
+              <Link to='home' className='navegacao'>
+                <Box mx={1} style={{ cursor: "pointer" }} >
+                  <p style={{ fontFamily: "Jacques Francois" }} >
+                    Home
+                  </p>
+                </Box>
+              </Link>
 
-        </Box>
+              <Link to='/contato' className='navegacao'>
+                <Box mx={1} className='cursor' >
+                  <p style={{ fontFamily: "Jacques Francois" }} >
+                    Contato
+                  </p>
+                </Box>
+              </Link>
+
+            </div>
+
+            <div>
+              <img src={img} style={{ width: "200px", height: "140px", marginLeft: "-130%" }} />
+            </div>
+
+
+          </Box>
+
+  
+
+
+          <div style={{ display: "flex", alignItems: 'center', flexDirection: "row" }}>
+            <Link to='/login' className='navegacao'>
+              <Box mx={1} onClick={goLogout} style={{ cursor: "pointer", color: 'white', fontSize: '20px', fontFamily: "Jacques Francois" }}>
+                <p >
+                  Login
+                </p>
+              </Box>
+            </Link>
+          </div>
+
+       
 
       </Toolbar>
-    </AppBar>
+      </AppBar >
   }
 
   return (
