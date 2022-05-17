@@ -4,6 +4,8 @@ import { Link, useNavigate } from 'react-router-dom'
 import Usuario from '../../model/Usuario'
 import { cadastroUsuario } from '../../service/Service'
 import './CadastroUsuario.css'
+import imgCad from "../../assets/MuSkinPeq.png";
+
 
 function CadastroUsuario() {
     let history = useNavigate()
@@ -73,15 +75,33 @@ function CadastroUsuario() {
         }
     }
     return (
-        <Grid container justifyContent='center' alignItems='center' direction='row'>
-            <Grid item xs={6} className='backgroundCadastro'>
 
+       
 
-            </Grid>
-
-            <Grid item xs={6} alignItems='center'>
-                <Box padding={10}>
+        <Grid item xs={12}  container justifyContent='center' alignItems='center' direction="row" className="backPage">
+           
+            <Box m={4} className='img-cad' >
+           
+                <img src={imgCad} style={{ width: "500px", height: "200px" }} />
+           
+            </Box>
+        
+        <Grid item xs={4}>
+            
+            <Box >
+            
+            <div className='linhaVertical'> <div className='linhaVertical2'><div className='linhaVertical3'></div></div></div>
+            
+            </Box>
+            
+        </Grid>
+            <Grid item xs={4}  alignItems='center' className ="backgroundCadastro form1" >
+               
+                <Box padding={5}>
+                    
                     <form onSubmit={cadastrar}>
+
+        
                         <Typography
                             variant='h5'
                             gutterBottom
@@ -89,13 +109,26 @@ function CadastroUsuario() {
                             align='center'
                             className='tituloCadastro'
                         >
-                            Cadastrar
+                         
+                          INSIRA SEUS DADOS PARA  CADASTRO:
 
                         </Typography>
 
+                        <Typography
+                            variant='h5'
+                            gutterBottom
+                            component='h5'
+                            align='center'
+                            className='subTit'
+                        >
+                         
+                         NOME
+
+                        </Typography>
+
+
                         <TextField
                             id='nome'
-                            label='Nome'
                             variant='outlined'
                             name='nome'
                             margin='normal'
@@ -104,14 +137,28 @@ function CadastroUsuario() {
                             fullWidth
                             value={user.nome}
                             onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
+                            className="textField"
                         >
                             Nome
 
                         </TextField>
 
+
+                        <Typography
+                            variant='h5'
+                            gutterBottom
+                            component='h5'
+                            align='center'
+                            className='subTit'
+                        >
+                         
+                          USUÁRIO
+
+                        </Typography>                            
+
+
                         <TextField
                             id='usuario'
-                            label='Usuario'
                             variant='outlined'
                             name='usuario'
                             margin='normal'
@@ -120,13 +167,32 @@ function CadastroUsuario() {
                             fullWidth
                             value={user.usuario}
                             onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
+                            className="textField"
+
                         >
                             Usuario
+                        
                         </TextField>
+
+
+                        <Typography
+                            variant='h5'
+                            gutterBottom
+                            component='h5'
+                            align='center'
+                            className='subTit'
+                        >
+                         
+                      SENHA
+
+                        </Typography>                            
+    
+
+
+
 
                         <TextField
                             id='senha'
-                            label='Senha'
                             variant='outlined'
                             name='senha'
                             margin='normal'
@@ -136,13 +202,28 @@ function CadastroUsuario() {
                             fullWidth
                             value={user.senha}
                             onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
+                            className="textField"
+
                         >
                             Senha
+                       
                         </TextField>
+
+                        <Typography
+                            variant='h5'
+                            gutterBottom
+                            component='h5'
+                            align='center'
+                            className='subTit'
+                        >
+                         
+                          CONFIRMAR SENHA
+
+                        </Typography>  
+
 
                         <TextField
                             id='confirmarSenha'
-                            label='Confirmar senha'
                             variant='outlined'
                             name='confirmarSenha'
                             margin='normal'
@@ -152,15 +233,27 @@ function CadastroUsuario() {
                             fullWidth
                             value={confirmarSenha}
                             onChange={(e: ChangeEvent<HTMLInputElement>) => confirmarSenhaHandle(e)}
-                            
-                        >
-                            Confirmar senha
+                            className="textField"
 
+                        >
+                            Confirmar Senha
                         </TextField>
+
+
+                        <Typography
+                            variant='h5'
+                            gutterBottom
+                            component='h5'
+                            align='center'
+                            className='subTit'
+                        >
+                         
+                          DATA DE NASCIMENTO
+
+                        </Typography>                                                      
 
                         <TextField
                             id='dataNascimento'
-                            label=''
                             variant='outlined'
                             name='dataNascimento'
                             margin='normal'
@@ -169,30 +262,54 @@ function CadastroUsuario() {
                             fullWidth
                             value={user.dataNascimento}
                             onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
+                            className="textField"
                         >
                             Data de nascimento
+                        
                         </TextField>
-                        <FormHelperText>*Campo obrigatório</FormHelperText>
-                        <Box>
+                    
+                    <Grid container justifyContent='center' >      
+
+                               
+                                <FormHelperText >
+                            
+                                    *Campo obrigatório
+                            
+                                </FormHelperText>
+                            
+                         <Box>
+                        
                             <Button
+                              
                                 type='submit'
                                 variant='contained'
-                            >Cadastrar</Button>
+                                className='btnCadastrar'>
+                            
+                                    Cadastrar
+                            
+                            </Button>
+                            
                             <Link to='/login' className='linkTexto'>
 
                                 <Button
+                            
                                     variant='contained' 
-                                    className='btnCancelar'
-
-                                >Cancelar</Button>
+                                    className='btnCancelar'>
+                                        
+                                    Cancelar
+                                    
+                                 </Button>
+                        
                             </Link>
+                        
                         </Box>
+                    </Grid>
 
                     </form>
 
                 </Box>
 
-            </Grid>
+        </Grid>
 
         </Grid>
     )
