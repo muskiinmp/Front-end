@@ -16,3 +16,10 @@ img {
 .rec.rec-arrow:disabled {
     visibility: hidden;
 }
+button.rec-dot{
+    background-color: #C07A51;
+    box-shadow: 0 0 1px 3px #785846;
+}
+button.rec-dot:hover, button.rec-dot:active, button.rec-dot:focus  {
+    box-shadow: 0 0 1px 3px #e9b89c;
+}
