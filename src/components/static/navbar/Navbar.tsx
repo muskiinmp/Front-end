@@ -68,7 +68,7 @@ function Navbar() {
             </div>
 
             <div>
-              <img src={img} style={{ width: "200px", height: "140px", marginLeft: "-130%" }} />
+              <img src={img} style={{ width: "200px", height: "140px", marginLeft: "-90%" }} />
             </div>
 
 
@@ -112,7 +112,7 @@ function Navbar() {
             </div>
 
             <div>
-              <img src={img} style={{ width: "200px", height: "140px", marginLeft: "-130%" }} />
+              <img src={img} style={{ width: "200px", height: "140px", marginLeft: "-240%" }} />
             </div>
 
 
