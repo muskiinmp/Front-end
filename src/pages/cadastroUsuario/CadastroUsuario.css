@@ -11,20 +11,21 @@
     text-decoration: none !important;
 
 }
+.linhasCadastro{
+    margin-left: 30vw!important;
+}
 
 .backgroundCadastro {
     /* background-image: url(https://i.imgur.com/gimcsi1.jpg) !important; */
     /* background-repeat: no-repeat; */
-    width: 100vh;
-    min-height: 100vh;
-    background-size: cover;
+    min-width: 60vw!important;
+    min-height: 40vh!important;
     background-position: center;
     background-color: rgba(120, 88, 70, 0.29);
 
 }
 
 .backPage {
-
     background-color: #E5E5E5 !important;
 }
 
@@ -36,7 +37,6 @@
 }
 
 .btnCancelar {
-
 
     font-family: Jacques Francois !important;
     font-size: 20px !important;
@@ -64,7 +64,7 @@
     text-decoration: none;
     margin: 4px 2px;
     cursor: pointer;
-    margin-left: 20px !important;
+    margin-left: 185px !important;
     margin-top: 20px !important;
 
 }

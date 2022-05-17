@@ -3,7 +3,7 @@
     background-color: #FAF6F4;
 }
 
-.titulo{
+.tituloHome{
     
     font-weight: bold !important;
     color: white;
@@ -24,4 +24,7 @@
     font-family: jaldi !important;
     font-size: "20px" !important;
     color: "#785846" !important;
+}
+.cardsHome{
+    margin-left: 5vw!important;
 }

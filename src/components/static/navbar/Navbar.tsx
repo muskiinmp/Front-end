@@ -63,7 +63,13 @@ function Navbar() {
                   <MenuNav2 />
                 </p>
               </Box>
-
+              <Link to='/sobre' className='navegacao'>
+                <Box mx={1} className='cursor' >
+                  <p style={{ fontFamily: "Jacques Francois" }} >
+                    Sobre nós
+                  </p>
+                </Box>
+              </Link>
 
             </div>
 
@@ -101,10 +107,10 @@ function Navbar() {
                 </Box>
               </Link>
 
-              <Link to='/contato' className='navegacao'>
+              <Link to='/sobre' className='navegacao'>
                 <Box mx={1} className='cursor' >
                   <p style={{ fontFamily: "Jacques Francois" }} >
-                    Contato
+                    Sobre nós
                   </p>
                 </Box>
               </Link>

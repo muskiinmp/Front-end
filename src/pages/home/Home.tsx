@@ -32,13 +32,13 @@ function Home() {
         <Grid item xs={12}  style={{marginTop:'40px'}}>
           <CarouselComponent />
         </Grid>
-        <Grid container style={{marginLeft: "320px"}}>
+        <Grid container style={{marginLeft: "230px"}}>
           <Box>
-            <Typography style={{color:"#AA836C", fontSize:"25px",marginBottom:"10px"}}variant='h3' className='titulo'> Novidades</Typography>
+            <Typography style={{color:"#AA836C", fontSize:"25px",marginBottom:"30px", marginTop:"30px",}}variant='h3' className='tituloHome'> Novidadades</Typography>
           </Box>
         </Grid>
         
-        <Grid container item className='testeGrid' justifyContent='center' alignContent='center'style={{marginLeft:'150px'}}>
+        <Grid container item className='cardsHome' justifyContent='center' alignContent='center'>
           <Grid container xs={3} item className='testeGrid'>
             <Card className={classes.root}>
               <CardActionArea>
@@ -134,7 +134,7 @@ function Home() {
 
           <Grid container style={{marginLeft: "170px"}}>
           <Box>
-            <Typography style={{color:"#AA836C", fontSize:"25px",marginBottom:"30px", marginTop:"30px",}}variant='h3' className='titulo'> Relevância</Typography>
+            <Typography style={{color:"#AA836C", fontSize:"25px",marginBottom:"30px", marginTop:"30px",}}variant='h3' className='tituloHome'> Relevância</Typography>
           </Box>
         </Grid>
 
@@ -237,7 +237,7 @@ function Home() {
 
 
       
-        <Grid container item className='testeGrid' justifyContent='center' alignContent='center' style={{marginTop:'50px', marginLeft:'150px', marginBottom:'50px'}}>
+        <Grid container item className='testeGrid' justifyContent='center' alignContent='center' style={{marginTop:'50px', marginLeft:'5vw', marginBottom:'50px'}}>
           <Grid container xs={3} item className='testeGrid'>
             <Card className={classes.root}>
               <CardActionArea>

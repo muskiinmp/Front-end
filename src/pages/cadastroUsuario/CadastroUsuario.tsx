@@ -79,23 +79,12 @@ function CadastroUsuario() {
        
 
         <Grid item xs={12}  container justifyContent='center' alignItems='center' direction="row" className="backPage">
-           
-            <Box m={4} className='img-cad' >
-           
-                <img src={imgCad} style={{ width: "500px", height: "200px" }} />
-           
-            </Box>
-        
-        <Grid item xs={4}>
-            
-            <Box >
+            <Box className="linhasCadastro">
             
             <div className='linhaVertical'> <div className='linhaVertical2'><div className='linhaVertical3'></div></div></div>
             
             </Box>
-            
-        </Grid>
-            <Grid item xs={4}  alignItems='center' className ="backgroundCadastro form1" >
+            <Grid item xs={3}  alignItems='center' className ="backgroundCadastro form1" >
                
                 <Box padding={5}>
                     

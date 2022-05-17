@@ -77,13 +77,13 @@ function Login() {
 
     return (
 
-        <Grid container direction="column" justifyContent="center" alignItems="center" style={{ backgroundColor: '#E4D8D4' }} >
+        <Grid container direction="column" justifyContent="center" alignItems="center" className="backgroundLogin">
             <div className='vl'> </div>
             <div className='vl2'></div>
 
 
 
-            <Grid item xs={4} className='img-log' >
+            <Grid item xs={2} className='img-log' >
                 <img src={img} style={{ width: "500px", height: "200px" }} />
             </Grid>
 
