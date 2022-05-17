@@ -1,9 +1,9 @@
 import React, { ChangeEvent, useEffect, useState } from 'react'
-import { Box, Button, Grid, TextField, Typography } from '@material-ui/core'
+import { Box, Button, Grid, Paper, TextField, Typography } from '@material-ui/core'
 import { Link, useNavigate } from 'react-router-dom';
 import { login } from '../../service/Service';
 import UsuarioLogin from '../../model/UsuarioLogin';
-import img from "../../assets/21.png"
+import img from "../../assets/login.png";
 
 import './Login.css';
 import { useDispatch } from 'react-redux';
@@ -78,10 +78,13 @@ function Login() {
     return (
 
         <Grid container direction="column" justifyContent="center" alignItems="center" style={{ backgroundColor: '#E4D8D4' }} >
+            <div className='vl'> </div>
+            <div className='vl2'></div>
 
 
-            <Grid item xs={4} style={{ marginTop: '5px' }}>
-                <img src={img} style={{ width: "500px", height: "300px" }} />
+
+            <Grid item xs={4} className='img-log' >
+                <img src={img} style={{ width: "500px", height: "200px" }} />
             </Grid>
 
 
@@ -89,11 +92,25 @@ function Login() {
 
                 <Box paddingX={5}>
 
+
+
                     <form onSubmit={onSubmit}>
-                        <Typography variant='h4' gutterBottom color='textPrimary' component='h4' align='center' style={{ fontFamily: "Jacques Francois", color: '#E4D8D4' }}>Bem-vindo(a)</Typography>
-                        <Typography variant='h6' gutterBottom color='textPrimary' component='h6' align='center' style={{ fontFamily: "Jacques Francois", color: '#E4D8D4' }}>Insira seus dados de login:</Typography>
-                        <TextField style={{ backgroundColor: '#C4C4C4', borderRadius: '15px' }} value={usuarioLogin.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' label='E-mail' variant='outlined' name='usuario' margin='normal' fullWidth />
-                        <TextField style={{ backgroundColor: '#C4C4C4', borderRadius: '15px' }} value={usuarioLogin.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' label='Senha' variant='outlined' name='senha' margin='normal' type='password' fullWidth />
+                        
+                        <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center'
+                            style={{ fontFamily: "Jacques Francois", color: '#E4D8D4' }}>Bem-vindo(a)</Typography>
+                        <Typography variant='h5' gutterBottom color='textPrimary' component='h5' align='center'
+                            style={{ fontFamily: "Jacques Francois", color: '#E4D8D4' }}>Insira seus dados de login:</Typography>
+
+                        <TextField style={{ backgroundColor: '#E5E5E5', borderRadius: '15px'}}    value={usuarioLogin.usuario}
+                            onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
+                            id='usuario' label='E-mail' variant='outlined' name='usuario' margin='normal' fullWidth />
+
+                        <TextField style={{ backgroundColor: '#E5E5E5', borderRadius: '15px' }} value={usuarioLogin.senha}
+                            onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
+                            id='senha' label='Senha' variant='outlined' name='senha' margin='normal' type='password' fullWidth />
+
+
+
                         <Box marginTop={2} textAlign='center' className='bnt-cancelar'>
                             <Link className='text-decoration-none' to='/home'>
                                 <Button style={{ fontFamily: "Jacques Francois", fontSize: "20px" }} type='submit' variant='contained' className='btn-login'>
@@ -108,10 +125,12 @@ function Login() {
                     </form>
                     <Box display='flex' justifyContent='center' marginTop={2}>
                         <Box marginRight={1} >
-                            <Typography variant='subtitle1' gutterBottom align='center' className='login-cad1' style={{ fontFamily: "Jacques Francois" }} >Ainda não possui conta?</Typography>
+                            <Typography variant='subtitle1' gutterBottom
+                                align='center' className='login-cad1' style={{ fontFamily: "Jacques Francois" }} >Ainda não possui conta?</Typography>
                         </Box>
                         <Link className='text-decoration-none' to='/cadastrar'>
-                            <Typography variant='subtitle1' gutterBottom align='center' className='login-cad2' style={{ fontFamily: "Jacques Francois", fontWeight: 'bold' }}>Cadastre-se</Typography>
+                            <Typography variant='subtitle1' gutterBottom
+                                align='center' className='login-cad2' style={{ fontFamily: "Jacques Francois", fontWeight: 'bold' }}>Cadastre-se</Typography>
                         </Link>
 
                     </Box>
@@ -120,6 +139,7 @@ function Login() {
                 </Box>
 
             </Box>
+
         </Grid>
     );
 }
