@@ -32,14 +32,14 @@ function Home() {
         <Grid item xs={12}  style={{marginTop:'40px'}}>
           <CarouselComponent />
         </Grid>
-        <Grid container style={{marginLeft: "310px"}}>
+        <Grid container style={{marginLeft: "320px"}}>
           <Box>
             <Typography style={{color:"#AA836C", fontSize:"25px",marginBottom:"10px"}}variant='h3' className='titulo'> Novidades</Typography>
           </Box>
         </Grid>
         
         <Grid container item className='testeGrid' justifyContent='center' alignContent='center'style={{marginLeft:'150px'}}>
-          <Grid container xs={2} item className='testeGrid'>
+          <Grid container xs={3} item className='testeGrid'>
             <Card className={classes.root}>
               <CardActionArea>
                 <CardMedia
@@ -63,7 +63,7 @@ function Home() {
           </Grid>
 
 
-          <Grid container xs={2} item className='testeGrid'>
+          <Grid container xs={3} item className='testeGrid'>
             <Card className={classes.root}>
               <CardActionArea>
                 <CardMedia
@@ -86,7 +86,7 @@ function Home() {
             </Card>
           </Grid>
           
-          <Grid container xs={2} item className='testeGrid'>
+          <Grid container xs={3} item className='testeGrid'>
             <Card className={classes.root}>
               <CardActionArea>
                 <CardMedia
@@ -139,7 +139,7 @@ function Home() {
         </Grid>
 
           <Grid container item className='testeGrid' justifyContent='center' alignContent='center'>
-          <Grid container xs={2} item className='testeGrid'>
+          <Grid container xs={3} item className='testeGrid'>
             <Card className={classes.root}>
               <CardActionArea>
                 <CardMedia
@@ -163,7 +163,7 @@ function Home() {
           </Grid>
 
 
-          <Grid container xs={2} item className='testeGrid'>
+          <Grid container xs={3} item className='testeGrid'>
             <Card className={classes.root}>
               <CardActionArea>
                 <CardMedia
@@ -186,7 +186,7 @@ function Home() {
             </Card>
           </Grid>
           
-          <Grid container xs={2} item className='testeGrid'>
+          <Grid container xs={3} item className='testeGrid'>
             <Card className={classes.root}>
               <CardActionArea>
                 <CardMedia
@@ -238,7 +238,7 @@ function Home() {
 
       
         <Grid container item className='testeGrid' justifyContent='center' alignContent='center' style={{marginTop:'50px', marginLeft:'150px', marginBottom:'50px'}}>
-          <Grid container xs={2} item className='testeGrid'>
+          <Grid container xs={3} item className='testeGrid'>
             <Card className={classes.root}>
               <CardActionArea>
                 <CardMedia
@@ -262,7 +262,7 @@ function Home() {
           </Grid>
 
 
-          <Grid container xs={2} item className='testeGrid'>
+          <Grid container xs={3} item className='testeGrid'>
             <Card className={classes.root}>
               <CardActionArea>
                 <CardMedia
@@ -285,7 +285,7 @@ function Home() {
             </Card>
           </Grid>
           
-          <Grid container xs={2} item className='testeGrid'>
+          <Grid container xs={3} item className='testeGrid'>
             <Card className={classes.root}>
               <CardActionArea>
                 <CardMedia

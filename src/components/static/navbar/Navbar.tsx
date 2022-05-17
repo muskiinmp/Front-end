@@ -58,7 +58,6 @@ function Navbar() {
                 </p>
               </Box>
 
-
               <Box mx={1} style={{ cursor: "pointer" }} >
                 <p style={{ fontFamily: "Jacques Francois" }}>
                   <MenuNav2 />
@@ -69,7 +68,7 @@ function Navbar() {
             </div>
 
             <div>
-              <img src={img} style={{ width: "200px", height: "140px", marginLeft: "-130%" }} />
+              <img src={img} style={{ width: "200px", height: "140px", marginLeft: "-90%" }} />
             </div>
 
 
@@ -113,7 +112,7 @@ function Navbar() {
             </div>
 
             <div>
-              <img src={img} style={{ width: "200px", height: "140px", marginLeft: "-130%" }} />
+              <img src={img} style={{ width: "200px", height: "140px", marginLeft: "-240%" }} />
             </div>
 
 
