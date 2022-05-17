@@ -16,5 +16,4 @@
 .icon:hover {
     transform: rotateZ(45deg) !important;
     transition: 0.6s ease-out !important;
-
 }

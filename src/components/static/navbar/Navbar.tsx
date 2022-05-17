@@ -58,7 +58,6 @@ function Navbar() {
                 </p>
               </Box>
 
-
               <Box mx={1} style={{ cursor: "pointer" }} >
                 <p style={{ fontFamily: "Jacques Francois" }}>
                   <MenuNav2 />
