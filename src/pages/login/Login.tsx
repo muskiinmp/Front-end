@@ -9,6 +9,7 @@ import './Login.css';
 import { useDispatch } from 'react-redux';
 import { addToken } from '../../store/tokens/actions';
 import { toast } from 'react-toastify';
+import { blue } from '@mui/material/colors';
 
 
 
@@ -68,6 +69,7 @@ function Login() {
                 draggable: false,
                 theme: "colored",
                 progress: undefined,
+                
             });
         }
 
@@ -77,18 +79,17 @@ function Login() {
 
     return (
 
-        <Grid container direction="column" justifyContent="center" alignItems="center" className="backgroundLogin">
+        <Grid  xs={12} container className="backgroundLogin">
+            <Grid container xs={2}className='linhasLogin'> 
             <div className='vl'> </div>
-            <div className='vl2'></div>
-
-
-
-            <Grid item xs={2} className='img-log' >
-                <img src={img} style={{ width: "500px", height: "200px" }} />
+            <div className='vl'></div>
             </Grid>
 
+            <Grid className='gridLogin' item>
 
-            <Box m={9} style={{ backgroundColor: '#AE988D', borderRadius: '15px', width: '500px', height: '500px' }} className='caixa-login'>
+                <img src={img} className='img-log' />
+
+            <Box m={9} className='caixa-login'>
 
                 <Box paddingX={5}>
 
@@ -101,25 +102,26 @@ function Login() {
                         <Typography variant='h5' gutterBottom color='textPrimary' component='h5' align='center'
                             style={{ fontFamily: "Jacques Francois", color: '#E4D8D4' }}>Insira seus dados de login:</Typography>
 
-                        <TextField style={{ backgroundColor: '#E5E5E5', borderRadius: '15px'}}    value={usuarioLogin.usuario}
+                        <TextField style={{ backgroundColor: '#E5E5E5', borderRadius: '3px'}}    value={usuarioLogin.usuario}
                             onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
-                            id='usuario' label='E-mail' variant='outlined' name='usuario' margin='normal' fullWidth />
+                            id='usuario' label='E-mail' variant='outlined' name='usuario' margin='normal' required fullWidth />
 
-                        <TextField style={{ backgroundColor: '#E5E5E5', borderRadius: '15px' }} value={usuarioLogin.senha}
+                        <TextField style={{ backgroundColor: '#E5E5E5', borderRadius: '3px' }} value={usuarioLogin.senha}
                             onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
-                            id='senha' label='Senha' variant='outlined' name='senha' margin='normal' type='password' fullWidth />
+                            id='senha' label='Senha' variant='outlined' name='senha' margin='normal' type='password' required fullWidth />
 
 
 
                         <Box marginTop={2} textAlign='center' className='bnt-cancelar'>
+                            <Button style={{ fontFamily: "Jacques Francois", fontSize: "20px" }} type='submit' variant='contained' className='btn-login'>
+                                Entrar
+                            </Button>
                             <Link className='text-decoration-none' to='/home'>
                                 <Button style={{ fontFamily: "Jacques Francois", fontSize: "20px" }} type='submit' variant='contained' className='btn-login'>
                                     Cancelar
                                 </Button>
                             </Link>
-                            <Button style={{ fontFamily: "Jacques Francois", fontSize: "20px" }} type='submit' variant='contained' className='btn-login'>
-                                Entrar
-                            </Button>
+                            
 
                         </Box>
                     </form>
@@ -139,7 +141,7 @@ function Login() {
                 </Box>
 
             </Box>
-
+            </Grid>
         </Grid>
     );
 }

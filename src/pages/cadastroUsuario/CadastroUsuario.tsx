@@ -4,7 +4,9 @@ import { Link, useNavigate } from 'react-router-dom'
 import Usuario from '../../model/Usuario'
 import { cadastroUsuario } from '../../service/Service'
 import './CadastroUsuario.css'
+import '../../components/toastify/Toastify.css';
 import imgCad from "../../assets/MuSkinPeq.png";
+import { toast } from 'react-toastify'
 
 
 function CadastroUsuario() {
@@ -58,18 +60,45 @@ function CadastroUsuario() {
             
             try {
                 cadastroUsuario(`/usuarios/cadastrar`, user, setUserResult)
-                alert('Usuario cadastrado com sucesso')
+                toast.success('Usuário cadastrado com sucesso', {
+                    position: "top-right",
+                    autoClose: 2000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: false,
+                    draggable: false,
+                    theme: "colored",
+                    progress: undefined,
+                });
 
             
             } catch (error) {
                 console.log(`Error: ${error}`)
-                
-                
-                alert("Erro ao cadastrar o Usuário")
+                toast.error('Dados do usuário inconsistentes', {
+                    position: "top-right",
+                    autoClose: 2000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: false,
+                    draggable: false,
+                    theme: "colored",
+                    progress: undefined,
+                    
+                });
             }
 
         } else {
-            alert('Dados inconsistentes. Verifique as informações de cadastro.')
+            toast.warn('Dados do usuário inconsistentes', {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined,
+                
+            });
 
             setUser({ ...user, senha: "" }) 
         }
@@ -84,7 +113,7 @@ function CadastroUsuario() {
             <div className='linhaVertical'> <div className='linhaVertical2'><div className='linhaVertical3'></div></div></div>
             
             </Box>
-            <Grid item xs={3}  alignItems='center' className ="backgroundCadastro form1" >
+            <Grid item xs={3}  alignItems='center' direction="column" className ="backgroundCadastro form1" >
                
                 <Box padding={5}>
                     
@@ -248,7 +277,7 @@ function CadastroUsuario() {
                             margin='normal'
                             type='date'
                             required
-                            fullWidth
+                            
                             value={user.dataNascimento}
                             onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
                             className="textField"

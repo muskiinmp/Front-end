@@ -6,7 +6,7 @@ img {
 
 /* square buttons */
 .rec.rec-arrow {
-    background-color: #C07A51;
+    background-color: #C07A51!important;
     color: #785846;
 }
 .rec.rec-arrow:hover {
@@ -14,6 +14,8 @@ img {
     color: #785846!important;
 }
 .rec.rec-arrow:disabled {
+    background-color: #C07A51!important;
+    color: #785846!important;
     visibility: hidden;
 }
 button.rec-dot{

@@ -32,9 +32,9 @@ function Home() {
         <Grid item xs={12}  style={{marginTop:'40px'}}>
           <CarouselComponent />
         </Grid>
-        <Grid container style={{marginLeft: "230px"}}>
+        <Grid container style={{marginLeft: "210px"}}>
           <Box>
-            <Typography style={{color:"#AA836C", fontSize:"25px",marginBottom:"30px", marginTop:"30px",}}variant='h3' className='tituloHome'> Novidadades</Typography>
+            <Typography style={{color:"#AA836C", fontSize:"25px",marginBottom:"30px", marginTop:"30px",}}variant='h3' className='tituloHome'> ___Novidadades</Typography>
           </Box>
         </Grid>
         
@@ -132,9 +132,9 @@ function Home() {
             </Card>
           </Grid>
 
-          <Grid container style={{marginLeft: "170px"}}>
+          <Grid container style={{marginLeft: "140px"}}>
           <Box>
-            <Typography style={{color:"#AA836C", fontSize:"25px",marginBottom:"30px", marginTop:"30px",}}variant='h3' className='tituloHome'> Relevância</Typography>
+            <Typography style={{color:"#AA836C", fontSize:"25px",marginBottom:"30px", marginTop:"30px",}}variant='h3' className='tituloHome'> ___Relevância</Typography>
           </Box>
         </Grid>
 

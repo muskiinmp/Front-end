@@ -1,6 +1,8 @@
 .backgroundLogin{
     background-color: #E4D8D4;
-    height: 100vh;
+    justify-content: flex-start;
+    width: 100vw;
+    min-height: 861px;
 }
 
 .text-decorator-none {
@@ -13,38 +15,47 @@
 
 
 .img-log{
-    display: flex;
-    justify-content: center;
+    display: inline;
+    justify-content: flex-start!important;
     align-content: center;
-    margin-bottom: 50px!important;
-    padding-right: 20px;
+    margin-bottom: 20px;
+
+    width: 470px; 
+    height: 265px;
+}
+.gridLogin{
+    justify-content: center!important;
+    margin-left: 13vw!important;
+    width: 36.6vw;
+    height: 100vh;
+}
+
+.linhasLogin{
+    display: flex;
+    justify-content: space-around;
+    width: 180px!important;
+    height: 100vh;
+    min-height: 100vh;
 }
 
 .vl {
-    position: absolute;
-    width: 700px;
+    width: 30px;
     height: 100vh;
-    border-right: 29px solid #DA781D;
-    right: 95%;
+    min-height: 861px;
+    background-color:  #DA781D;
 
 }
-
-.vl2 {
-    position: absolute;
-    width: 700px;
-    height: 100vh;
-    border-right: 29px solid #DA781D;
-    left: -42%;
-
-}
-
-
 
 .caixa-login {
     display: flex !important;
     justify-content: center !important;
     align-items: center;
     margin: 0 !important;
+
+    background-color: #AE988D;
+    border-radius: 15px; 
+    width: 38vw; 
+    height: 500px;
 
 }
 

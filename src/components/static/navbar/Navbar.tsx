@@ -118,7 +118,7 @@ function Navbar() {
             </div>
 
             <div>
-              <img src={img} style={{ width: "200px", height: "140px", marginLeft: "-240%" }} />
+              <img src={img} className="logoNavbar" />
             </div>
 
 
@@ -129,7 +129,7 @@ function Navbar() {
 
           <div style={{ display: "flex", alignItems: 'center', flexDirection: "row" }}>
             <Link to='/login' className='navegacao'>
-              <Box mx={1} onClick={goLogout} style={{ cursor: "pointer", color: 'white', fontSize: '20px', fontFamily: "Jacques Francois" }}>
+              <Box mx={1} style={{ cursor: "pointer", color: 'white', fontSize: '20px', fontFamily: "Jacques Francois" }}>
                 <p >
                   Login
                 </p>
