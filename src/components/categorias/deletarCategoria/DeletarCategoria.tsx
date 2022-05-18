@@ -98,7 +98,7 @@ function DeletarCategoria() {
                     <CardContent>
                         <Box justifyContent="center">
                             <Typography color="textSecondary" gutterBottom>
-                                Deseja deletar a categoria:
+                                Deseja realmente deletar a categoria?
                             </Typography>
                             <Typography color="textSecondary">
                                 { categoria.descricao }
@@ -109,12 +109,12 @@ function DeletarCategoria() {
                     <CardActions>
                         <Box display="flex" justifyContent="start" ml={1.0} mb={2} >
                             <Box mx={2}>
-                                <Button onClick={sim} variant="contained" className="botaoAtualizar" size='large' color="primary">
+                                <Button onClick={sim} variant="contained" className="btnSim" size='large' color="primary">
                                     Sim
                                 </Button>
                             </Box>
                             <Box mx={2}>
-                                <Button onClick={nao} variant="contained" size='large' className='botaoCancelar'>
+                                <Button onClick={nao} variant="contained" size='large' className='btnNao'>
                                     Não
                                 </Button>
                             </Box>

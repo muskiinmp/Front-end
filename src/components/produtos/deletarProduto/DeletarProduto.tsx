@@ -95,7 +95,7 @@ function DeletarProduto() {
                     <CardContent>
                         <Box justifyContent="center">
                             <Typography color="textSecondary" gutterBottom>
-                                Deseja deletar o produto?
+                                Deseja realmente deletar o produto?
                             </Typography>
                             <Typography color="textSecondary" >
                                 {produto?.nome}
@@ -106,12 +106,12 @@ function DeletarProduto() {
                     <CardActions>
                         <Box display="flex" justifyContent="start" ml={1.0} mb={2} >
                             <Box mx={2}>
-                                <Button  onClick={sim} variant="contained" size='large' color="primary">
+                                <Button  onClick={sim} variant="contained" size='large' className="btnSim">
                                     Sim
                                 </Button>
                             </Box>
                             <Box>
-                                <Button onClick={nao} variant="contained" size='large' color="secondary">
+                                <Button onClick={nao} variant="contained" size='large' className="btnNao">
                                     Não
                                 </Button>
                             </Box>

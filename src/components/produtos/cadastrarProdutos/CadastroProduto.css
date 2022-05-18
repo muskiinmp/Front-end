@@ -17,6 +17,7 @@
 }
 
 .tituloProduto {
+    font-family: 'Jacques Francois'!important;
     margin: 20px 0px!important;
     color: #A64208 !important;
 }
@@ -29,7 +30,7 @@
 .subtituloProduto {
     padding: 0px 0px 0px 35px!important;
 
-    font-family: 'Jacques Francois';
+    font-family: 'Jacques Francois'!important;
     font-style: normal;
     font-weight: 400;
     font-size: 25px!important;
@@ -42,21 +43,21 @@
 .subtituloProduto2 {
     padding: 0px 0px 0px 445px!important;
 
-    font-family: 'Jacques Francois';
+    font-family: 'Jacques Francois'!important;
     font-style: normal;
     font-weight: 400;
     font-size: 25px!important;
     line-height: 33px!important;
     text-align: center;
 
-    color: #B6917B;
+    color: #B6917B!important;
 }
 .selecaoCategoria{
-    font-family: 'Jacques Francois';
+    font-family: 'Jacques Francois'!important;
     font-style: normal;
     font-size: 25px!important;
     font-weight: 400;
-    color: #B6917B;
+    color: #B6917B!important;
 }
 
 .nomeProduto {
@@ -112,7 +113,7 @@
 }
 
 .btnProduto {
-    font-family: 'Jacques Francois';
+    font-family: 'Jacques Francois'!important;
     font-style: normal;
 
     width: 217px;
@@ -120,6 +121,6 @@
     margin: 30px 0px 0px 330px!important;
     border-radius: 20px!important;
 
-    color: #B6917B;
-    font-size: 20px;
+    color: #B6917B!important;
+    font-size: 20px!important;
 }
