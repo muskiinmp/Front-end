@@ -286,12 +286,12 @@ function CadastroUsuario() {
                         
                         </TextField>
                     
-                    <Grid container justifyContent='center' >      
+                    <Grid container justifyContent='flex-start' >      
 
                                
                                 <FormHelperText >
                             
-                                    *Campo obrigatório
+                                    *Apenas maiores de idade
                             
                                 </FormHelperText>
                             
